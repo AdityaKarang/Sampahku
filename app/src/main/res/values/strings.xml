@@ -4,6 +4,7 @@
     <string name="login_msg_2">Masuk untuk melanjutkan</string>
     <string name="register_msg">Silahkan daftar disini</string>
     <string name="email">Email</string>
+    <string name="nama">Nama</string>
     <string name="password">Password</string>
     <string name="daftar">Daftar sekarang</string>
     <string name="login_btn">Masuk</string>
@@ -17,6 +18,28 @@
     <string name="lokasi_msg">Lokasi Bank Sampah</string>
     <string name="tukar_msg">Tukar Sampah</string>
     <string name="donasi_msg">Donasi Sampah</string>
+    <string name="warning_msg">Mohon isi data dibawah ini dengan benar!</string>
+
+    <string name="pickup">Pickup</string>
+    <string name="pickup_tgl">Tanggal Pickup</string>
+    <string name="pickup_alamat">Alamat</string>
+    <string name="pickup_jenis">Jenis Sampah</string>
+    <string name="pickup_berat">Berat Sampah</string>
+
+    <string-array name="kategori_sampah">
+        <item>Plastik</item>
+        <item>Logam</item>
+        <item>Kertas</item>
+        <item>Karet</item>
+    </string-array>
+    <string-array name="berat_sampah">
+        <item>1 Kg</item>
+        <item>2 Kg</item>
+        <item>3 Kg</item>
+        <item>4 Kg</item>
+    </string-array>
+
+
 
 
 

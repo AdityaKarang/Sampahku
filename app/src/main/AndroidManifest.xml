@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sampahku">
         <activity
+            android:name=".view.pickup.PickupActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.register.RegisterActivity"
             android:exported="false" />
         <activity
