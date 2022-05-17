@@ -7,6 +7,13 @@
     <string name="password">Password</string>
     <string name="daftar">Daftar sekarang</string>
     <string name="login_btn">Masuk</string>
+    <string name="text_banner_1">Selamat datang di Sampahku!</string>
+    <string name="text_banner_2">Sampahku adalah solusi untuk mengatasi masalah sampah di lingkungan anda</string>
+    <string name="point_msg_1">Point Anda :</string>
+    <string name="point_msg_2">Tukar Point</string>
+    <string name="menu_kategori">Menu</string>
+    <string name="img_banner">Image</string>
+
 
 
 </resources>
