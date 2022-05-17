@@ -13,6 +13,10 @@
     <string name="point_msg_2">Tukar Point</string>
     <string name="menu_kategori">Menu</string>
     <string name="img_banner">Image</string>
+    <string name="pickup_msg">Pickup Sampah</string>
+    <string name="lokasi_msg">Lokasi Bank Sampah</string>
+    <string name="tukar_msg">Tukar Sampah</string>
+    <string name="donasi_msg">Donasi Sampah</string>
 
 
 
