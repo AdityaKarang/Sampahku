@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/green"
+    android:background="@color/grey"
     tools:context=".view.register.RegisterActivity">
 
     <ImageView
@@ -15,7 +15,8 @@
         android:background="@drawable/white_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/todo" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineHorizontal"
@@ -45,7 +46,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal2"
-        app:srcCompat="@drawable/hai"
+        app:srcCompat="@drawable/ic_register_image"
+        android:contentDescription="@string/todo"
         />
 
 
@@ -57,8 +59,9 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="80dp"
         android:alpha="0"
+        android:fontFamily="@font/poppins_medium"
         android:text="@string/register_msg"
-        android:textColor="@color/black"
+        android:textColor="@color/green"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,26 +77,28 @@
         android:layout_marginTop="32dp"
         android:alpha="0"
         android:text="@string/email"
-        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/green"
         app:layout_constraintStart_toStartOf="@+id/messageTextView"
         app:layout_constraintTop_toBottomOf="@+id/messageTextView" />
 
-        <com.adityakarang.sampahku.customview.EmailEditText
-            android:id="@+id/emailEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginTop="8dp"
-            android:paddingLeft="20dp"
-            android:alpha="0"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            app:layout_constraintTop_toBottomOf="@+id/emailTextView">
+    <com.adityakarang.sampahku.customview.EmailEditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:alpha="0"
+        android:drawableStart="@drawable/ic_username"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/edt_login"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/emailTextView">
 
-        </com.adityakarang.sampahku.customview.EmailEditText>
+    </com.adityakarang.sampahku.customview.EmailEditText>
 
         <TextView
             android:id="@+id/passwordTextView"
@@ -102,42 +107,91 @@
             android:layout_marginTop="16dp"
             android:alpha="0"
             android:text="@string/password"
-            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/green"
             app:layout_constraintStart_toStartOf="@+id/emailEditText"
             app:layout_constraintTop_toBottomOf="@+id/emailEditText" />
 
-        <com.adityakarang.sampahku.customview.PassEditText
-            android:id="@+id/passwordEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginTop="8dp"
-            android:paddingLeft="20dp"
-            android:alpha="0"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:ems="10"
-            android:inputType="textPassword"
-            app:layout_constraintTop_toBottomOf="@+id/passwordTextView">
+    <com.adityakarang.sampahku.customview.PassEditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0"
+        android:drawableStart="@drawable/ic_password"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/edt_login"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextView">
 
-        </com.adityakarang.sampahku.customview.PassEditText>
+    </com.adityakarang.sampahku.customview.PassEditText>
 
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="0dp"
             android:layout_height="64dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="64dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
             android:alpha="0"
-            android:background="@drawable/button_bg"
+            android:background="@drawable/edt_login"
             android:text="@string/register_btn"
+            android:fontFamily="@font/poppins_medium"
             android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="426dp"
+        android:layout_height="37dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegister"
+        app:layout_constraintStart_toStartOf="@+id/btnRegister"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/akun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/sudah_punya_akun"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginStart="128dp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="8dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0"
+                android:layout_marginStart="4dp"
+                android:text="@string/login"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/akun"
+                tools:layout_editor_absoluteY="8dp"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

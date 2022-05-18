@@ -9,16 +9,18 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="530dp"
-        android:background="@drawable/white_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="519dp"
+            android:layout_height="493dp"
+            android:background="@drawable/white_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5"
+            android:contentDescription="@string/todo" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -34,8 +36,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Selamat Datang, Reza!"
+            android:text="@string/selamat_datang"
             android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins_medium"
             android:layout_marginTop="16dp"
             android:textStyle="bold"
             android:textColor="@color/white"
@@ -70,10 +73,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:text="@string/point_msg_1"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/ic_cash"
+                    app:drawableEndCompat="@drawable/ic_shield_check" />
 
                 <TextView
                     android:id="@+id/tvPoint"
@@ -88,9 +95,13 @@
                 android:id="@+id/tukar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_tukar"
+                android:layout_marginEnd="14dp"
+                android:fontFamily="@font/poppins_medium"
                 android:text="@string/point_msg_2"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                tools:ignore="UseCompatTextViewDrawableXml" />
 
         </LinearLayout>
 
@@ -110,8 +121,8 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
         <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="459dp"
+            android:layout_height="204dp">
 
 
             <ImageView
@@ -122,7 +133,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/img_banner"
                 android:padding="30dp"
-                 />
+                android:src="@drawable/ic_undraw_throw" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -134,8 +145,9 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="258dp"
+                    android:layout_height="51dp"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="@string/text_banner_1"
                     android:textColor="@color/black"
                     android:textSize="18sp"
@@ -144,7 +156,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:text="@string/text_banner_2"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
@@ -156,30 +169,32 @@
     </androidx.cardview.widget.CardView>
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/menu_kategori"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="52dp"
+            android:text="@string/menu_kategori"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5" />
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="509dp"
+            android:layout_height="464dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <include layout="@layout/kategori_menu" />
+            <include layout="@layout/kategori_menu" />
 
-    </androidx.core.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

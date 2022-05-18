@@ -117,6 +117,7 @@ class LoginActivity : AppCompatActivity() {
             ObjectAnimator.ofFloat(binding.imgBackground, View.ALPHA, 1f).setDuration(500)
         val messageTextView =
             ObjectAnimator.ofFloat(binding.messageTextView, View.ALPHA, 1f).setDuration(500)
+        val messageTextView1 = ObjectAnimator.ofFloat(binding.messageTextView1, View.ALPHA, 1f).setDuration(500)
         val emailTextView =
             ObjectAnimator.ofFloat(binding.emailTextView, View.ALPHA, 1f).setDuration(500)
         val emailEditText =
@@ -135,6 +136,7 @@ class LoginActivity : AppCompatActivity() {
             playSequentially(
                 imgBackground,
                 messageTextView,
+                messageTextView1,
                 emailTextView,
                 emailEditText,
                 passwordTextView,

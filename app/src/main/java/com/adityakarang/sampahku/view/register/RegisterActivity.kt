@@ -14,7 +14,6 @@ import android.widget.Toast
 import com.adityakarang.sampahku.databinding.ActivityRegisterBinding
 import com.adityakarang.sampahku.view.login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
-import java.util.regex.Pattern
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -71,6 +70,13 @@ class RegisterActivity : AppCompatActivity() {
             
             userRegister(email, password)
         }
+
+        binding.login.setOnClickListener {
+            startActivity(Intent(this@RegisterActivity, LoginActivity::class.java).apply {
+                startActivity(this)
+            })
+        }
+
     }
 
     private fun userRegister(email: String, password: String) {
@@ -108,6 +114,10 @@ class RegisterActivity : AppCompatActivity() {
         val passwordEditText =
             ObjectAnimator.ofFloat(binding.passwordEditText, View.ALPHA, 1f).setDuration(500)
         val login = ObjectAnimator.ofFloat(binding.btnRegister, View.ALPHA, 1f).setDuration(500)
+        val textviewAkun =
+            ObjectAnimator.ofFloat(binding.akun, View.ALPHA, 1f).setDuration(500)
+        val textviewLogin =
+            ObjectAnimator.ofFloat(binding.login, View.ALPHA, 1f).setDuration(500)
 
 
         AnimatorSet().apply {
@@ -118,7 +128,9 @@ class RegisterActivity : AppCompatActivity() {
                 emailEditText,
                 passwordTextView,
                 passwordEditText,
-                login
+                login,
+                textviewAkun,
+                textviewLogin
             )
             startDelay = 500
         }.start()

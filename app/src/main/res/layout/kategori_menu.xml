@@ -29,13 +29,16 @@
 
                 <ImageView
                     android:layout_width="70dp"
-                    android:layout_height="70dp" />
+                    android:layout_height="70dp"
+                    android:contentDescription="@string/todo"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="@string/pickup_msg"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_medium"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -66,7 +69,8 @@
 
                 <ImageView
                     android:layout_width="70dp"
-                    android:layout_height="70dp" />
+                    android:layout_height="70dp"
+                    android:contentDescription="@string/todo"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -74,7 +78,9 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/lokasi_msg"
                     android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -110,7 +116,8 @@
 
                 <ImageView
                     android:layout_width="70dp"
-                    android:layout_height="70dp" />
+                    android:layout_height="70dp"
+                    android:contentDescription="@string/todo"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -118,7 +125,9 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/tukar_msg"
                     android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <View
                     android:layout_width="match_parent"
@@ -147,7 +156,8 @@
 
                 <ImageView
                     android:layout_width="70dp"
-                    android:layout_height="70dp" />
+                    android:layout_height="70dp"
+                    android:contentDescription="@string/todo"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -155,7 +165,9 @@
                     android:layout_marginTop="10dp"
                     android:text="@string/donasi_msg"
                     android:textColor="@color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <View
                     android:layout_width="match_parent"
