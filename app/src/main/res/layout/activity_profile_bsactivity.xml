@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
-    tools:context=".nasabahprofile.ProfileNasabahActivity">
+    tools:context=".banksampahprofile.ProfileBSActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView3"
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="@string/nama"
+                android:text="@string/nama_bank_sampah"
                 android:textSize="16sp"
                 android:textColor="@color/black"
                 android:layout_marginStart="16dp"
@@ -102,7 +102,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="@string/kategori"
+                android:text="@string/kode_pos"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_alamat" />
@@ -132,7 +132,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="@string/email"
+                android:text="@string/no_telp_fax"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/et_username" />
@@ -146,7 +146,7 @@
                 android:autofillHints=""
                 android:fontFamily="@font/poppins_regular"
                 android:minHeight="48dp"
-                android:text="@string/user_email"
+                android:text="@string/user_name"
                 android:textColor="@color/bluelight"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -154,34 +154,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6"
                 tools:ignore="LabelFor,TextFields,DuplicateSpeakableTextCheck" />
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/no_handphone"
-                android:textColor="@color/black"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/et_email" />
-
-            <EditText
-                android:id="@+id/et_nohp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginStart="16dp"
-                android:autofillHints=""
-                android:fontFamily="@font/poppins_regular"
-                android:minHeight="48dp"
-                android:text="@string/user_email"
-                android:textColor="@color/bluelight"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7"
-                tools:ignore="LabelFor,TextFields"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 

@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sampahku">
         <activity
+            android:name=".NotifikasiBSActivity"
+            android:exported="false" />
+        <activity
+            android:name=".banksampahprofile.EditProfileBSActivity"
+            android:exported="false" />
+        <activity
+            android:name=".banksampahprofile.ProfileBSActivity"
+            android:exported="false" />
+        <activity
+            android:name=".nasabahprofile.EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.maps.MapsActivity"
             android:exported="false" />
         <activity
