@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "163130391328",
+    "project_id": "sampahku-14670",
+    "storage_bucket": "sampahku-14670.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163130391328:android:1b7e4ccfedf559a3977545",
+        "android_client_info": {
+          "package_name": "com.adityakarang.sampahku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163130391328-54ae8p8kpqc9sqdbn3g4m6rt1dq6vr59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6wL_cdkGs7czWqeBPiM6PklwBH_ietS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163130391328-54ae8p8kpqc9sqdbn3g4m6rt1dq6vr59.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
