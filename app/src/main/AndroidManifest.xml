@@ -13,6 +13,9 @@
             android:name=".view.maps.MapsActivity"
             android:exported="false" />
         <activity
+            android:name=".nasabahprofile.ProfileNasabahActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.pickup.PickupActivity"
             android:exported="false" />
         <activity
