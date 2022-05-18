@@ -86,7 +86,7 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){
                 if (it.isSuccessful){
-                    Toast.makeText(this, "User Created", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
                     Intent(this@LoginActivity, MainActivity::class.java).also {
                         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(it)
@@ -97,15 +97,15 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-    override fun onStart() {
-        super.onStart()
-        if (auth.currentUser != null) {
-            Intent(this@LoginActivity, MainActivity::class.java).also {
-                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(it)
-            }
-        }
-    }
+//    override fun onStart() {
+//        super.onStart()
+//        if (auth.currentUser != null) {
+//            Intent(this@LoginActivity, MainActivity::class.java).also {
+//                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//                startActivity(it)
+//            }
+//        }
+//    }
 
     private fun playAnimation() {
         ObjectAnimator.ofFloat(binding.imgView, View.TRANSLATION_X, -30f, 30f).apply {

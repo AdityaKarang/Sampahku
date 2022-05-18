@@ -36,6 +36,8 @@
     <string name="kode_pos">Kode Pos</string>
     <string name="no_telp_fax">No.Telp/Fax</string>
     <string name="kategori">kategori</string>
+    <string name="error_email">Invalid email</string>
+    <string name="error_pass">password less than 6 characters</string>
 
     <string-array name="kategori_sampah">
         <item>Plastik</item>
