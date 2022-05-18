@@ -6,20 +6,27 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.Toast
+import com.adityakarang.sampahku.MainActivity
 import com.adityakarang.sampahku.databinding.ActivityLoginBinding
 import com.adityakarang.sampahku.view.register.RegisterActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        auth = FirebaseAuth.getInstance()
 
         setView()
         setAction()
@@ -45,6 +52,57 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(Intent(this@LoginActivity, RegisterActivity::class.java).apply {
                     startActivity(this)
                 })
+            }
+
+            btnLogin.setOnClickListener {
+                val email = binding.emailEditText.text.toString()
+                val password = binding.passwordEditText.text.toString()
+
+                if (email.isEmpty()){
+                    binding.emailEditText.error = "Masukan email terlebih dahulu"
+                    binding.emailEditText.requestFocus()
+                    return@setOnClickListener
+                }
+
+                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+                    binding.emailEditText.error = "Email tidak valid"
+                    binding.emailEditText.requestFocus()
+                    return@setOnClickListener
+                }
+
+                if (password.isEmpty() || password.length < 6){
+                    binding.passwordEditText.error = "Password harus lebih dari 6 karakter"
+                    binding.passwordEditText.requestFocus()
+                    return@setOnClickListener
+                }
+
+                userLogin(email, password)
+            }
+        }
+    }
+
+    private fun userLogin(email: String, password: String) {
+
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this){
+                if (it.isSuccessful){
+                    Toast.makeText(this, "User Created", Toast.LENGTH_SHORT).show()
+                    Intent(this@LoginActivity, MainActivity::class.java).also {
+                        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(it)
+                    }
+                }else{
+                    Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if (auth.currentUser != null) {
+            Intent(this@LoginActivity, MainActivity::class.java).also {
+                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(it)
             }
         }
     }

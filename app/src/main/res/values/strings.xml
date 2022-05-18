@@ -26,6 +26,16 @@
     <string name="pickup_alamat">Alamat</string>
     <string name="pickup_jenis">Jenis Sampah</string>
     <string name="pickup_berat">Berat Sampah</string>
+    <string name="user_name">User name</string>
+    <string name="alamat">Alamat</string>
+    <string name="user_email">User email</string>
+    <string name="no_handphone">No. Handphone</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="simpan">Simpan</string>
+    <string name="nama_bank_sampah">Nama Bank Sampah</string>
+    <string name="kode_pos">Kode Pos</string>
+    <string name="no_telp_fax">No.Telp/Fax</string>
+    <string name="kategori">kategori</string>
 
     <string-array name="kategori_sampah">
         <item>Plastik</item>
