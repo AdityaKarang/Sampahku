@@ -122,7 +122,7 @@
                 android:layout_centerInParent="true"
                 android:contentDescription="@string/img_banner"
                 android:padding="30dp"
-                android:src="" />
+                 />
 
             <LinearLayout
                 android:layout_width="match_parent"

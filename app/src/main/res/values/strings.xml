@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">Sampahku</string>
-    <string name="login_msg_1">Selamat datang kembali!</string>
-    <string name="login_msg_2">Masuk untuk melanjutkan</string>
+    <string name="login_msg_1">Silahkan login untuk melanjutkan</string>
     <string name="register_msg">Silahkan daftar disini</string>
     <string name="email">Email</string>
+    <string name="username">Username</string>
     <string name="nama">Nama</string>
     <string name="password">Password</string>
     <string name="daftar">Daftar sekarang</string>
     <string name="login_btn">Masuk</string>
+    <string name="register_btn">Register</string>
     <string name="text_banner_1">Selamat datang di Sampahku!</string>
     <string name="text_banner_2">Sampahku adalah solusi untuk mengatasi masalah sampah di lingkungan anda</string>
     <string name="point_msg_1">Point Anda :</string>
@@ -38,9 +39,6 @@
         <item>3 Kg</item>
         <item>4 Kg</item>
     </string-array>
-
-
-
 
 
 </resources>

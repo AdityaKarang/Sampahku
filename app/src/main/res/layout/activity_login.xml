@@ -7,9 +7,11 @@
     tools:context=".view.login.LoginActivity">
 
     <ImageView
+        android:id="@+id/img_background"
         android:layout_width="match_parent"
         android:layout_height="430dp"
         android:background="@drawable/green_bg"
+        android:alpha="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -33,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/img_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="32dp"
@@ -46,55 +48,57 @@
          />
 
 
+    <!--        <TextView-->
+<!--            android:id="@+id/message"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:alpha="0"-->
+<!--            android:text="@string/login_msg_2"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="19sp"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/messageTextView"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/messageTextView"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/messageTextView" />-->
+
     <TextView
         android:id="@+id/messageTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="80dp"
         android:alpha="0"
         android:text="@string/login_msg_1"
         android:textColor="@color/white"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/img_view"
+        tools:layout_editor_absoluteY="347dp" />
 
-        <TextView
-            android:id="@+id/message"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:alpha="0"
-            android:text="@string/login_msg_2"
-            android:textColor="@color/white"
-            android:textSize="19sp"
-            app:layout_constraintEnd_toEndOf="@+id/messageTextView"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/messageTextView"
-            app:layout_constraintTop_toBottomOf="@+id/messageTextView" />
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:alpha="0"
+        android:text="@string/email"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/messageTextView"
+        app:layout_constraintTop_toBottomOf="@+id/messageTextView" />
 
-        <TextView
-            android:id="@+id/emailTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:alpha="0"
-            android:layout_marginTop="16dp"
-            android:text="@string/email"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/message"
-            app:layout_constraintTop_toBottomOf="@+id/message" />
-
-        <com.google.android.material.textfield.TextInputEditText
+    <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/edit_text_bg"
+            android:alpha="0"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -122,6 +126,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/edit_text_bg"
+            android:alpha="0"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -136,6 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
+            android:alpha="0"
             android:text="Don't have an account?"
             android:textSize="15sp"
             app:layout_constraintStart_toStartOf="@+id/passwordEditText"
@@ -148,17 +154,18 @@
             android:layout_height="wrap_content"
             android:text="@string/daftar"
             android:textColor="@color/white"
+            android:alpha="0"
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
             app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
         <Button
-            android:id="@+id/loginButton"
+            android:id="@+id/btnLogin"
             android:layout_width="0dp"
             android:layout_height="64dp"
             android:layout_marginStart="64dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="55dp"
             android:layout_marginEnd="64dp"
             android:alpha="0"
             android:background="@drawable/button_bg"
