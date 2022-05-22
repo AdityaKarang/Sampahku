@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.adityakarang.sampahku">
 
     <application
@@ -12,24 +13,25 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:label="@string/title_activity_main" />
+            android:label="@string/app_name" />
         <activity
             android:name=".NotifikasiBSActivity"
             android:exported="false" />
         <activity
-            android:name=".banksampahprofile.EditProfileBSActivity"
+            android:name=".view.banksampahprofile.EditProfileBSActivity"
             android:exported="false" />
         <activity
-            android:name=".banksampahprofile.ProfileBSActivity"
+            android:name=".view.banksampahprofile.ProfileBSActivity"
             android:exported="false" />
         <activity
-            android:name=".nasabahprofile.EditProfileActivity"
-            android:exported="false" />
+            android:name="com.adityakarang.sampahku.view.nasabahprofile.EditProfileActivity"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".view.maps.MapsActivity"
             android:exported="false" />
         <activity
-            android:name=".nasabahprofile.ProfileNasabahActivity"
+            android:name="com.adityakarang.sampahku.view.nasabahprofile.ProfileNasabahActivity"
             android:exported="false" />
         <activity
             android:name=".view.pickup.PickupActivity"

@@ -1,12 +1,12 @@
-package com.adityakarang.sampahku.nasabahprofile
+package com.adityakarang.sampahku.view.banksampahprofile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.adityakarang.sampahku.R
 
-class ProfileNasabahActivity : AppCompatActivity() {
+class ProfileBSActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile_nasabah)
+        setContentView(R.layout.activity_profile_bsactivity)
     }
 }
