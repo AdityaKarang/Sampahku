@@ -23,13 +23,13 @@
             android:name=".banksampahprofile.ProfileBSActivity"
             android:exported="false" />
         <activity
-            android:name="com.adityakarang.sampahku.view.ui.nasabahprofile.EditProfileActivity"
+            android:name=".nasabahprofile.EditProfileActivity"
             android:exported="false" />
         <activity
             android:name=".view.maps.MapsActivity"
             android:exported="false" />
         <activity
-            android:name="com.adityakarang.sampahku.view.ui.nasabahprofile.ProfileNasabahActivity"
+            android:name=".nasabahprofile.ProfileNasabahActivity"
             android:exported="false" />
         <activity
             android:name=".view.pickup.PickupActivity"

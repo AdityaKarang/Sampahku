@@ -1,4 +1,4 @@
-package com.adityakarang.sampahku.view.ui.nasabahprofile
+package com.adityakarang.sampahku.nasabahprofile
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

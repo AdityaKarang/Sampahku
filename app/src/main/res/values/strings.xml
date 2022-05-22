@@ -63,7 +63,9 @@
     <string name="title_notifications">Notifications</string>
     <string name="camera">Camera</string>
     <string name="profile">Profile</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Sampahku</string>
+    <string name="informasi_sampah">Informasi Sampah</string>
+
 
 
 </resources>

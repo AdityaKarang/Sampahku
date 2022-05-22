@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.adityakarang.sampahku.databinding.ActivityMainBinding
+
 class HomeFragment : Fragment() {
 
     private var _binding: ActivityMainBinding? = null
@@ -27,7 +28,7 @@ class HomeFragment : Fragment() {
         _binding = ActivityMainBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.tvPoint
+        val textView: TextView = binding.textView
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
