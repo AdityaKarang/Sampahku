@@ -1,12 +1,12 @@
-package com.adityakarang.sampahku.nasabahprofile
+package com.adityakarang.sampahku.view.bottomnav.ui.nasabahprofile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.adityakarang.sampahku.R
 
-class EditProfileActivity : AppCompatActivity() {
+class ProfileNasabahActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit_profile_nb)
+        setContentView(R.layout.activity_profile_nasabah)
     }
 }

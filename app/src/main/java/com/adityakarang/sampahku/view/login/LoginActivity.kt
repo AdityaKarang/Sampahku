@@ -11,7 +11,7 @@ import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
-import com.adityakarang.sampahku.MainActivity
+import com.adityakarang.sampahku.view.bottomnav.BottomNavActivity
 import com.adityakarang.sampahku.databinding.ActivityLoginBinding
 import com.adityakarang.sampahku.view.register.RegisterActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -87,7 +87,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this){
                 if (it.isSuccessful){
                     Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
-                    Intent(this@LoginActivity, MainActivity::class.java).also {
+                    Intent(this@LoginActivity, BottomNavActivity::class.java).also {
                         it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(it)
                     }

@@ -35,7 +35,7 @@
     <string name="nama_bank_sampah">Nama Bank Sampah</string>
     <string name="kode_pos">Kode Pos</string>
     <string name="no_telp_fax">No.Telp/Fax</string>
-    <string name="kategori">kategori</string>
+    <string name="kategori">Kategori</string>
     <string name="error_email">Invalid email</string>
     <string name="error_pass">password less than 6 characters</string>
     <string name="todo">TODO</string>
@@ -58,6 +58,12 @@
         <item>3 Kg</item>
         <item>4 Kg</item>
     </string-array>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="camera">Camera</string>
+    <string name="profile">Profile</string>
 
 
 </resources>

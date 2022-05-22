@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.adityakarang.sampahku">
 
     <application
@@ -9,6 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sampahku">
+<!--        <activity-->
+<!--            android:name=".ui.HomeActivity"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/title_activity_home" />-->
         <activity
             android:name=".NotifikasiBSActivity"
             android:exported="false" />
@@ -19,13 +24,14 @@
             android:name=".banksampahprofile.ProfileBSActivity"
             android:exported="false" />
         <activity
-            android:name=".nasabahprofile.EditProfileActivity"
-            android:exported="false" />
+            android:name="com.adityakarang.sampahku.view.bottomnav.ui.nasabahprofile.EditProfileActivity"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".view.maps.MapsActivity"
             android:exported="false" />
         <activity
-            android:name=".nasabahprofile.ProfileNasabahActivity"
+            android:name="com.adityakarang.sampahku.view.bottomnav.ui.nasabahprofile.ProfileNasabahActivity"
             android:exported="false" />
         <activity
             android:name=".view.pickup.PickupActivity"
@@ -43,7 +49,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.adityakarang.sampahku.view.bottomnav.BottomNavActivity"
             android:exported="false" />
     </application>
 
