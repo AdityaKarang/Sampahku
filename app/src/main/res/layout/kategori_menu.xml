@@ -29,9 +29,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="132dp"
-                    android:layout_height="110dp"
-                    android:src="@drawable/truck"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:contentDescription="@string/todo"/>
 
                 <TextView
@@ -71,10 +70,9 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="132dp"
-                    android:layout_height="110dp"
-                    android:contentDescription="@string/todo"
-                    android:src="@drawable/location" />
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:contentDescription="@string/todo"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -120,9 +118,8 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="132dp"
-                    android:layout_height="110dp"
-                    android:src="@drawable/swap"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:contentDescription="@string/todo"/>
 
                 <TextView
@@ -162,20 +159,19 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="132dp"
-                    android:layout_height="110dp"
-                    android:src="@drawable/information"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:contentDescription="@string/todo"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="@string/informasi_sampah"
+                    android:text="@string/donasi_msg"
                     android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:fontFamily="@font/poppins_medium"/>
 
                 <View
                     android:layout_width="match_parent"

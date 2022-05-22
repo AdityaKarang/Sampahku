@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green"
-    tools:context=".view.bottomnav.ui.home.HomeFragment">
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,9 +13,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="match_parent"
+            android:layout_width="519dp"
             android:layout_height="493dp"
-            android:layout_marginTop="8dp"
             android:background="@drawable/white_bg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +53,7 @@
         android:layout_margin="10dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="5dp"
-
+        app:cardUseCompatPadding="true"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:layout_editor_absoluteX="19dp">
 
@@ -122,8 +121,8 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
         <RelativeLayout
-            android:layout_width="366dp"
-            android:layout_height="157dp">
+            android:layout_width="459dp"
+            android:layout_height="204dp">
 
 
             <ImageView
@@ -137,19 +136,17 @@
                 android:src="@drawable/ic_undraw_throw" />
 
             <LinearLayout
-                android:layout_width="197dp"
-                android:layout_height="147dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="1dp"
+                android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/imageBanner"
                 android:gravity="start|center"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="166dp"
-                    android:layout_height="55dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_width="258dp"
+                    android:layout_height="51dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/text_banner_1"
                     android:textColor="@color/black"
@@ -157,12 +154,12 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="169dp"
-                    android:layout_height="74dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins_regular"
                     android:text="@string/text_banner_2"
                     android:textColor="@color/black"
-                    android:layout_marginEnd="8dp"
                     android:textSize="12sp" />
 
             </LinearLayout>
@@ -176,10 +173,10 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="36dp"
-            android:fontFamily="@font/poppins_medium"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="52dp"
             android:text="@string/menu_kategori"
+            android:fontFamily="@font/poppins_medium"
             android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -187,8 +184,9 @@
             app:layout_constraintTop_toBottomOf="@+id/cardView5" />
 
         <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="509dp"
+            android:layout_height="464dp"
+            android:layout_marginTop="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
