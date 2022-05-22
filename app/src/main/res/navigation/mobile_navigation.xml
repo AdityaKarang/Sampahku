@@ -18,8 +18,18 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
+        android:id="@+id/navigation_camera"
+        android:name="com.adityakarang.sampahku.view.ui.notifications.NotificationsFragment"
+        android:label="@string/camera"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.adityakarang.sampahku.view.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.adityakarang.sampahku.view.ui.notifications.NotificationsFragment"
+        android:label="@string/profile"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
