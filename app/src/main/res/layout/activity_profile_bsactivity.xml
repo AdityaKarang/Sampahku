@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
-    tools:context=".view.banksampahprofile.ProfileBSActivity">
+    tools:context=".view.role.admin.banksampahprofile.ProfileBSActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageView3"

@@ -9,38 +9,52 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Sampahku">
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
         <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            android:label="@string/app_name" />
-        <activity
-            android:name=".NotifikasiBSActivity"
+            android:name=".view.role.user.activities.tukarsampah.TukarSampahActivity"
             android:exported="false" />
         <activity
-            android:name=".view.banksampahprofile.EditProfileBSActivity"
+            android:name=".view.role.user.activities.informasisampah.InformasiActivity"
             android:exported="false" />
         <activity
-            android:name=".view.banksampahprofile.ProfileBSActivity"
+            android:name=".view.role.user.activities.lokasi.LokasiActivity"
             android:exported="false" />
         <activity
-            android:name="com.adityakarang.sampahku.view.nasabahprofile.EditProfileActivity"
+            android:name=".view.role.admin.navigation.kamera.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.role.user.activities.dashboard.UserDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.role.admin.dashboard.AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.role.admin.banksampahprofile.EditProfileBSActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.role.admin.banksampahprofile.ProfileBSActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.role.user.nasabahprofile.EditProfileActivity"
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
-            android:name=".view.maps.MapsActivity"
+            android:name=".view.role.user.maps.MapsActivity"
             android:exported="false" />
         <activity
-            android:name="com.adityakarang.sampahku.view.nasabahprofile.ProfileNasabahActivity"
+            android:name=".view.role.user.nasabahprofile.ProfileNasabahActivity"
             android:exported="false" />
         <activity
-            android:name=".view.pickup.PickupActivity"
+            android:name=".view.role.user.activities.pickup.PickupActivity"
             android:exported="false" />
         <activity
-            android:name=".view.register.RegisterActivity"
+            android:name=".view.auth.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".view.login.LoginActivity"
+            android:name=".view.auth.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.spalshscreen.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,6 +62,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.main.MainActivity" />
     </application>
 
 </manifest>

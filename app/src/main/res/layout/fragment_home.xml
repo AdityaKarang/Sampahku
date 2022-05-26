@@ -6,12 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/green"
-    tools:context=".view.ui.home.HomeFragment"
+    tools:context=".view.role.user.navigation.home.HomeFragment"
    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <ImageView
             android:id="@+id/imageView2"
@@ -36,16 +37,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/selamat_datang"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/poppins_medium"
-                android:layout_marginTop="16dp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -154,7 +145,7 @@
                         android:fontFamily="@font/poppins_medium"
                         android:text="@string/text_banner_1"
                         android:textColor="@color/black"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -165,7 +156,7 @@
                         android:fontFamily="@font/poppins_regular"
                         android:text="@string/text_banner_2"
                         android:textColor="@color/black"
-                        android:textSize="12sp" />
+                        android:textSize="10sp" />
 
                 </LinearLayout>
 
@@ -196,9 +187,206 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
-            <include layout="@layout/kategori_menu" />
+<!--            <include layout="@layout/kategori_menu_user" />-->
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tvPickup"
+                        android:layout_width="0dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edt_login"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="115dp"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/truck" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/pickup_msg"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/green" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tvLokasi"
+                        android:layout_width="0dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edt_login"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="115dp"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/location" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/lokasi_msg"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/green" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tvTukar"
+                        android:layout_width="0dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edt_login"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="115dp"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/swap" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/tukar_msg"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/green" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/tvInformasi"
+                        android:layout_width="0dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edt_login"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="115dp"
+                                android:contentDescription="@string/todo"
+                                android:src="@drawable/information" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="@string/informasi_sampah"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="10dp"
+                                android:background="@color/green" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
         </androidx.core.widget.NestedScrollView>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

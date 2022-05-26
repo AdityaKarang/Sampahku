@@ -44,6 +44,11 @@
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="sudah_punya_akun">Sudah punya akun?</string>
     <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="masuk">Masuk</string>
+    <string name="copyright">© 2022 Bangkit</string>
+    <string name="title_welcome_page">SELAMAT DATANG!</string>
+    <string name="title_welcome_page2">Silahkan masuk untuk melanjutkan</string>
 
     <string-array name="kategori_sampah">
         <item>Plastik</item>
@@ -65,7 +70,12 @@
     <string name="profile">Profile</string>
     <string name="title_activity_main">Sampahku</string>
     <string name="informasi_sampah">Informasi Sampah</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="nasabah_msg">Pickup Sampah</string>
+    <string name="transaksi_msg">Pickup Sampah</string>
+    <string name="riwayat_msg">Pickup Sampah</string>
 
 
 </resources>

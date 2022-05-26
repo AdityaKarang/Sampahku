@@ -8,6 +8,7 @@ import android.graphics.Rect
 import android.util.AttributeSet
 import androidx.annotation.Nullable
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.view.marginTop
 import androidx.core.widget.doOnTextChanged
 import com.adityakarang.sampahku.R
 import com.adityakarang.sampahku.utils.sp
@@ -39,6 +40,7 @@ class PassEditText : AppCompatEditText {
 
         mPaintTextError = Paint(Paint.FAKE_BOLD_TEXT_FLAG)
             .apply {
+
                 textSize = 30.sp
                 color = Color.RED
                 this.alpha = 0
