@@ -12,18 +12,18 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_camera"
+        android:id="@+id/navigation_notifications"
         android:name="com.adityakarang.sampahku.view.role.user.navigation.notifications.NotificationsFragment"
         android:label="@string/camera"
         tools:layout="@layout/fragment_notifications" />
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_riwayat"
         android:name="com.adityakarang.sampahku.view.role.user.navigation.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:label="riwayat"
+        tools:layout="@layout/fragment_riwayat" />
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.adityakarang.sampahku.view.role.user.navigation.profile.ProfileFragment"
         android:label="@string/profile"
-        tools:layout="@layout/activity_profil" />
+        tools:layout="@layout/fragment_profile" />
 </navigation>

@@ -1,0 +1,28 @@
+package com.adityakarang.sampahku.view.role.user.navigation.riwayat
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import com.adityakarang.sampahku.R
+import com.adityakarang.sampahku.databinding.FragmentProfileBinding
+import com.adityakarang.sampahku.databinding.FragmentRiwayatBinding
+
+class RiwayatFragment : Fragment() {
+
+    private var binding: FragmentRiwayatBinding? = null
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentRiwayatBinding.inflate(
+            inflater,
+            container,
+            false
+        )
+        return binding?.root    }
+
+}

@@ -9,10 +9,13 @@ import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import com.adityakarang.sampahku.R
 import com.adityakarang.sampahku.databinding.ActivityDashboardUserBinding
+import com.adityakarang.sampahku.view.auth.login.LoginActivity
 import com.adityakarang.sampahku.view.main.MainActivity
+import com.adityakarang.sampahku.view.role.user.activities.scan.ScanSampahActivity
 import com.adityakarang.sampahku.view.role.user.navigation.home.HomeFragment
 import com.adityakarang.sampahku.view.role.user.navigation.notifications.NotificationsFragment
 import com.adityakarang.sampahku.view.role.user.navigation.profile.ProfileFragment
+import com.adityakarang.sampahku.view.role.user.navigation.riwayat.RiwayatFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 
@@ -27,12 +30,12 @@ class UserDashboardActivity : AppCompatActivity() {
                 moveToFragment(HomeFragment())
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_camera ->{
+            R.id.navigation_notifications ->{
                 moveToFragment(NotificationsFragment())
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_notifications ->{
-                moveToFragment(NotificationsFragment())
+            R.id.navigation_riwayat ->{
+                moveToFragment(RiwayatFragment())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_profile ->{
@@ -58,6 +61,9 @@ class UserDashboardActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         auth = FirebaseAuth.getInstance()
+
+        binding.bottomNavigation.background = null
+        binding.bottomNavigation.menu.getItem(2).isEnabled = false
 //        userCheck()
 
 //        binding.btnLogout.setOnClickListener {
@@ -71,9 +77,20 @@ class UserDashboardActivity : AppCompatActivity() {
 
         moveToFragment(HomeFragment())
 
+        setAction()
+
+
     }
 
-
+    private fun setAction(){
+        binding.apply {
+            floating.setOnClickListener {
+                startActivity(Intent(this@UserDashboardActivity, ScanSampahActivity::class.java).apply {
+                    startActivity(this)
+                })
+            }
+        }
+    }
 //    private fun userCheck() {
 //        val firebaseUser = auth.currentUser
 //        if (firebaseUser == null){
