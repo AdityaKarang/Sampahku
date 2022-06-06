@@ -14,6 +14,7 @@
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/ic_camera.xml" value="0.1205" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/ic_cash.xml" value="0.1205" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1205" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/ic_delete.xml" value="0.2165" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/ic_drop_down.xml" value="0.134" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/ic_email.xml" value="0.1205" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1205" />
@@ -30,8 +31,10 @@
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/ic_undraw_throw.xml" value="0.1205" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/ic_username.xml" value="0.1205" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/ic_wrong.xml" value="0.134" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/shape_kategori.xml" value="0.1" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/spinner_bg.xml" value="0.134" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/drawable/white_bg.xml" value="0.1645" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_add_tukar.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_admin_home.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_bottomnav.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_camera.xml" value="0.209375" />
@@ -41,8 +44,10 @@
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_dashboard_user.xml" value="0.25" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_edit_profile_bsactivity.xml" value="0.2" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_edit_profile_nb.xml" value="0.2" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_infomasi_sampah.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_informasi.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_item_notifikasi.xml" value="0.209375" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_kategori.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_lokasi.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_main.xml" value="0.2" />
@@ -50,17 +55,19 @@
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_notif.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_notifikasi_bsactivity.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_pickup.xml" value="0.25" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_pickup_add.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_profil.xml" value="0.33" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_profile_bsactivity.xml" value="0.12239583333333333" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_profile_nasabah.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_register.xml" value="0.18" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_scan_sampah.xml" value="0.2" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_splash_screen.xml" value="0.209375" />
-        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_tukar_sampah.xml" value="0.209375" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_tukar_sampah.xml" value="0.25" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/activity_tukar_sampah_add.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/fragment_admin_home.xml" value="0.22" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/fragment_blank.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/fragment_dashboard.xml" value="0.209375" />
-        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/fragment_notifications.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/fragment_profile.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/fragment_riwayat.xml" value="0.209375" />
@@ -68,6 +75,9 @@
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/kategori_menu.xml" value="0.22" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/kategori_menu_admin.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/kategori_menu_user.xml" value="0.209375" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/list_item_riwayat.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/riwayat_item.xml" value="0.209375" />
+        <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/layout/row_kategori.xml" value="0.25" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/menu/admin_nav_menu.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/menu/bottom_nav_menu.xml" value="0.209375" />
         <entry key="..\:/Users/aditya karang/AndroidStudioProjects/Sampahku/app/src/main/res/menu/menu_option.xml" value="0.209375" />

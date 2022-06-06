@@ -71,12 +71,7 @@ class AdminDashboardActivity : AppCompatActivity() {
 
         moveToFragment(AdminHomeFragment())
 
-
-
     }
-
-
-
     private fun userCheck() {
         val firebaseUser = auth.currentUser
         if (firebaseUser == null){
@@ -89,4 +84,6 @@ class AdminDashboardActivity : AppCompatActivity() {
             binding.tvEmail.text = email
         }
     }
+
+
 }

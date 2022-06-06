@@ -1,5 +1,6 @@
 package com.adityakarang.sampahku.view.role.admin.navigation.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.adityakarang.sampahku.databinding.FragmentAdminHomeBinding
+import com.adityakarang.sampahku.view.role.admin.activities.InfomasiSampahActivity
 
 
 class AdminHomeFragment : Fragment() {
@@ -36,5 +38,33 @@ class AdminHomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding!!.tvInformasi.setOnClickListener {
+            Intent(requireActivity(), InfomasiSampahActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+
+//        binding!!.tvLokasi.setOnClickListener {
+//            Intent(requireActivity(), LokasiActivity::class.java).apply {
+//                startActivity(this)
+//            }
+//        }
+//
+//        binding!!.tvTukar.setOnClickListener {
+//            Intent(requireActivity(), TukarSampahActivity::class.java).apply {
+//                startActivity(this)
+//            }
+//        }
+//
+//        binding!!.tvInformasi.setOnClickListener {
+//            Intent(requireActivity(), InformasiActivity::class.java).apply {
+//                startActivity(this)
+//            }
+//        }
     }
 }

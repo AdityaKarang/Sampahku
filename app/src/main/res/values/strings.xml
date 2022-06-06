@@ -11,7 +11,7 @@
     <string name="register_btn">Register</string>
     <string name="text_banner_1">Selamat datang di Sampahku!</string>
     <string name="text_banner_2">Sampahku adalah solusi untuk mengatasi masalah sampah di lingkungan anda</string>
-    <string name="point_msg_1">Point Anda</string>
+    <string name="point_msg_1">Saldo Anda</string>
     <string name="point_msg_2">Tukar Point</string>
     <string name="menu_kategori">Menu</string>
     <string name="img_banner">Image</string>
@@ -19,7 +19,7 @@
     <string name="lokasi_msg">Lokasi Bank Sampah</string>
     <string name="tukar_msg">Tukar Sampah</string>
     <string name="donasi_msg">Donasi Sampah</string>
-    <string name="warning_msg">Mohon isi data dibawah ini dengan benar!</string>
+    <string name="warning_msg">MASUKAN DATA DENGAN BENAR!</string>
 
     <string name="pickup">Pickup</string>
     <string name="pickup_tgl">Tanggal Pickup</string>
@@ -50,18 +50,23 @@
     <string name="title_welcome_page">SELAMAT DATANG!</string>
     <string name="title_welcome_page2">Silahkan masuk untuk melanjutkan</string>
 
+
+    <string name="tukar_berat">Berat Sampah (Kg)</string>
+    <string name="tukar_pendapatan">Total Pendapatan</string>
+
     <string-array name="kategori_sampah">
         <item>Plastik</item>
         <item>Logam</item>
         <item>Kertas</item>
         <item>Karet</item>
     </string-array>
-    <string-array name="berat_sampah">
-        <item>1 Kg</item>
-        <item>2 Kg</item>
-        <item>3 Kg</item>
-        <item>4 Kg</item>
+    <string-array name="harga_perkilo">
+        <item>1500</item>
+        <item>3000</item>
+        <item>800</item>
+        <item>1000</item>
     </string-array>
+
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>

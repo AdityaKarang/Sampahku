@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".view.role.user.navigation.profile.ProfileFragment">
 
-
-
     <Button
         android:id="@+id/btnLogout"
         style="@style/ButtonGeneral"

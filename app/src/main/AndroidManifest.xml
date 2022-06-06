@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.adityakarang.sampahku">
+    package="com.adityakarang.sampahku" >
 
     <application
         android:allowBackup="true"
@@ -9,12 +9,27 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar" >
+        <activity
+            android:name=".view.role.user.activities.tukarsampah.TukarSampahActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.role.user.activities.tukarsampah.AddTukarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.role.user.activities.pickup.PickupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.role.admin.activities.KategoriActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.role.admin.activities.InfomasiSampahActivity"
+            android:exported="false" />
         <activity
             android:name=".view.role.user.activities.scan.ScanSampahActivity"
             android:exported="false" />
         <activity
-            android:name=".view.role.user.activities.tukarsampah.TukarSampahActivity"
+            android:name=".view.role.user.activities.tukarsampah.AddTukarSampahActivity"
             android:exported="false" />
         <activity
             android:name=".view.role.user.activities.informasisampah.InformasiActivity"
@@ -48,7 +63,7 @@
             android:name=".view.role.user.nasabahprofile.ProfileNasabahActivity"
             android:exported="false" />
         <activity
-            android:name=".view.role.user.activities.pickup.PickupActivity"
+            android:name=".view.role.user.activities.pickup.AddPickupActivity"
             android:exported="false" />
         <activity
             android:name=".view.auth.register.RegisterActivity"
@@ -58,7 +73,7 @@
             android:exported="false" />
         <activity
             android:name=".view.spalshscreen.SplashScreenActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

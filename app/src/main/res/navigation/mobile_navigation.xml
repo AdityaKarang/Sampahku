@@ -10,7 +10,6 @@
         android:name="com.adityakarang.sampahku.view.role.user.navigation.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.adityakarang.sampahku.view.role.user.navigation.notifications.NotificationsFragment"
