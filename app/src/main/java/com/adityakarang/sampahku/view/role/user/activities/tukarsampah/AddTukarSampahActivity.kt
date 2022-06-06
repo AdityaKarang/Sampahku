@@ -1,6 +1,7 @@
 package com.adityakarang.sampahku.view.role.user.activities.tukarsampah
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -14,6 +15,8 @@ import androidx.lifecycle.ViewModelProvider
 import com.adityakarang.sampahku.R
 import com.adityakarang.sampahku.databinding.ActivityTukarSampahAddBinding
 import com.adityakarang.sampahku.utils.FunctionHelper.rupiahFormat
+import com.adityakarang.sampahku.view.role.user.activities.pickup.PickupActivity
+import com.adityakarang.sampahku.view.role.user.navigation.home.HomeFragment
 import com.google.firebase.auth.FirebaseAuth
 
 class AddTukarSampahActivity : AppCompatActivity() {
@@ -134,8 +137,8 @@ class AddTukarSampahActivity : AppCompatActivity() {
                 Toast.makeText(
                     this@AddTukarSampahActivity,
                     "Tukar Sampah Berhasil",
-                    Toast.LENGTH_SHORT
-                ).show()
+                    Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@AddTukarSampahActivity, TukarSampahActivity::class.java))
                 finish()
             }
         }

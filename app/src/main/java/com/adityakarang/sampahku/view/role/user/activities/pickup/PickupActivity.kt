@@ -68,7 +68,7 @@ class PickupActivity : AppCompatActivity() {
         binding.apply {
             pickupAdd.setOnClickListener {
                 startActivity(Intent(this@PickupActivity, AddPickupActivity::class.java).apply {
-                    startActivity(this)
+                    finish()
                 })
             }
         }

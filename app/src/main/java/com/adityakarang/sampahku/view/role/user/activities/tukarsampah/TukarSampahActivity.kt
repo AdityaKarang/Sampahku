@@ -29,6 +29,10 @@ class TukarSampahActivity : AppCompatActivity(), TukarSampahAdapter.TukarSampahA
 
         supportActionBar?.hide()
 
+        binding.btnBack.setOnClickListener {
+            onBackPressed()
+        }
+
         setAction()
         setInitLayout()
         setViewModel()

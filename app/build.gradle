@@ -6,6 +6,7 @@ plugins {
     id 'com.google.firebase.crashlytics'
     id 'kotlin-kapt'
     id 'kotlin-parcelize'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 
 }
 
@@ -46,6 +47,7 @@ dependencies {
     implementation 'androidx.room:room-ktx:2.5.0-alpha02'
     implementation "androidx.room:room-rxjava3:2.4.2"
     implementation "androidx.room:room-runtime:2.4.2"
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
     kapt "androidx.room:room-compiler:2.4.2"
     kapt 'androidx.room:room-compiler:2.5.0-alpha02'
 

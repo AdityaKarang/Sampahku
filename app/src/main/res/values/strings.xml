@@ -82,6 +82,7 @@
     <string name="nasabah_msg">Pickup Sampah</string>
     <string name="transaksi_msg">Pickup Sampah</string>
     <string name="riwayat_msg">Pickup Sampah</string>
+    <string name="title_activity_location">LocationActivity</string>
 
 
 </resources>

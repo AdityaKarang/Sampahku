@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import com.adityakarang.sampahku.databinding.FragmentHomeBinding
 import com.adityakarang.sampahku.utils.FunctionHelper
 import com.adityakarang.sampahku.view.role.user.activities.informasisampah.InformasiActivity
+import com.adityakarang.sampahku.view.role.user.activities.lokasi.LocationActivity
 import com.adityakarang.sampahku.view.role.user.activities.lokasi.LokasiActivity
 import com.adityakarang.sampahku.view.role.user.activities.pickup.PickupActivity
 import com.adityakarang.sampahku.view.role.user.activities.tukarsampah.AddTukarSampahActivity
@@ -53,7 +54,7 @@ class HomeFragment : Fragment() {
         }
 
         binding!!.tvLokasi.setOnClickListener {
-            Intent(requireActivity(), LokasiActivity::class.java).apply {
+            Intent(requireActivity(), LocationActivity::class.java).apply {
                 startActivity(this)
             }
         }
