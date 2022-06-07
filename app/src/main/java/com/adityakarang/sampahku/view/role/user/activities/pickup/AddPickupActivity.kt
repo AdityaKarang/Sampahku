@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.adityakarang.sampahku.databinding.ActivityPickupAddBinding
-import com.adityakarang.sampahku.view.auth.login.LoginActivity
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -49,16 +49,16 @@ class AddPickupActivity : AppCompatActivity() {
         alamat = binding.inputalamatET.text.toString().trim()
 
         if (nama.isEmpty()){
-            Toast.makeText(this, "Masukan Nama", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Masukan nama", Toast.LENGTH_SHORT).show()
         }
         if (jenis.isEmpty()){
-            Toast.makeText(this, "Masukan jenis Sampah", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Masukan jenis sampah", Toast.LENGTH_SHORT).show()
         }
         if (berat.isEmpty()){
-            Toast.makeText(this, "Masukan Berat Sampah", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Masukan berat sampah", Toast.LENGTH_SHORT).show()
         }
         if (alamat.isEmpty()){
-            Toast.makeText(this, "Masukan Alamat", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Masukan alamat", Toast.LENGTH_SHORT).show()
         }
         else{
             addData()

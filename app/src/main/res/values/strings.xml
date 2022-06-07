@@ -19,20 +19,20 @@
     <string name="lokasi_msg">Lokasi Bank Sampah</string>
     <string name="tukar_msg">Tukar Sampah</string>
     <string name="donasi_msg">Donasi Sampah</string>
-    <string name="warning_msg">MASUKAN DATA DENGAN BENAR!</string>
+    <string name="warning_msg">Masukan data dengan benar!</string>
 
-    <string name="pickup">Pickup</string>
-    <string name="pickup_tgl">Tanggal Pickup</string>
+    <string name="pickup">Ajukan Pickup</string>
+    <string name="pickup_tgl">Tanggal pickup</string>
     <string name="pickup_alamat">Alamat</string>
-    <string name="pickup_jenis">Jenis Sampah</string>
-    <string name="pickup_berat">Berat Sampah</string>
+    <string name="pickup_jenis">Jenis sampah</string>
+    <string name="pickup_berat">Berat sampah</string>
     <string name="user_name">User name</string>
     <string name="alamat">Alamat</string>
     <string name="user_email">User email</string>
-    <string name="no_handphone">No. Handphone</string>
-    <string name="kata_sandi">Kata Sandi</string>
+    <string name="no_handphone">Nomor handphone</string>
+    <string name="kata_sandi">Kata sandi</string>
     <string name="simpan">Simpan</string>
-    <string name="nama_bank_sampah">Nama Bank Sampah</string>
+    <string name="nama_bank_sampah">Nama bank sampah</string>
     <string name="kode_pos">Kode Pos</string>
     <string name="no_telp_fax">No.Telp/Fax</string>
     <string name="kategori">Kategori</string>
@@ -41,7 +41,7 @@
     <string name="todo">TODO</string>
     <string name="selamat_datang">Selamat Datang, Reza!</string>
     <string name="masuk_untuk_melanjutkan">Masuk untuk melanjutkan</string>
-    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="don_t_have_an_account">Tidak punya akun?</string>
     <string name="sudah_punya_akun">Sudah punya akun?</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
@@ -51,8 +51,8 @@
     <string name="title_welcome_page2">Silahkan masuk untuk melanjutkan</string>
 
 
-    <string name="tukar_berat">Berat Sampah (Kg)</string>
-    <string name="tukar_pendapatan">Total Pendapatan</string>
+    <string name="tukar_berat">Berat sampah (kg)</string>
+    <string name="tukar_pendapatan">Total pendapatan</string>
 
     <string-array name="kategori_sampah">
         <item>Plastik</item>
@@ -83,6 +83,13 @@
     <string name="transaksi_msg">Pickup Sampah</string>
     <string name="riwayat_msg">Pickup Sampah</string>
     <string name="title_activity_location">LocationActivity</string>
+    <string name="masukan_berat_sampah">Masukan berat sampah</string>
+    <string name="masukan_alamat">Masukan alamat</string>
+    <string name="tukar_sampah">Tukar Sampah</string>
+    <string name="masukan_nama_lengkap">Masukan nama lengkap</string>
+    <string name="rp_1500">Rp. 1500</string>
+    <string name="buat_pengajuan_pickup">Buat Pengajuan Pickup</string>
+    <string name="pickup_sampah">Pickup Sampah</string>
 
 
 </resources>

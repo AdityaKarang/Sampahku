@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.adityakarang.sampahku">
 
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -14,6 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+        <activity
+            android:name=".view.role.user.activities.scan.CameraActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCj5SkaElmuRdjzt4sPLKTMCbGOHbwVJbk" />
@@ -36,6 +41,8 @@
             android:exported="false" />
         <activity
             android:name=".view.role.user.activities.scan.ScanSampahActivity"
+            android:label="Scan Sampah"
+            android:parentActivityName=".view.role.user.activities.dashboard.UserDashboardActivity"
             android:exported="false" />
         <activity
             android:name=".view.role.user.activities.tukarsampah.AddTukarSampahActivity"

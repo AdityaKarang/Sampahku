@@ -20,9 +20,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_centerHorizontal="true"
-            android:text="PICKUP SAMPAH"
+            android:text="@string/pickup_sampah"
             android:textColor="@color/white"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <ImageButton
@@ -63,7 +63,7 @@
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Add Pickup Data"
+        android:text="@string/buat_pengajuan_pickup"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
