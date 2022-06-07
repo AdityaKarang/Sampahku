@@ -45,7 +45,6 @@ class UserDashboardActivity : AppCompatActivity() {
         val fragmentTrans = supportFragmentManager.beginTransaction()
         fragmentTrans.replace(R.id.fragment_container, fragment)
         fragmentTrans.commit()
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,10 +65,7 @@ class UserDashboardActivity : AppCompatActivity() {
         moveToFragment(HomeFragment())
 
         setAction()
-
-
     }
-
     private fun setAction(){
         binding.apply {
             floating.setOnClickListener {
