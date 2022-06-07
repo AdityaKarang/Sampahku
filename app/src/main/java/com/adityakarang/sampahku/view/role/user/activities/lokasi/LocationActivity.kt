@@ -8,13 +8,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import com.adityakarang.sampahku.R
 import com.adityakarang.sampahku.databinding.ActivityLocationBinding
-
-import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
 
 class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -27,7 +23,6 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
         binding = ActivityLocationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)

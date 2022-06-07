@@ -11,15 +11,15 @@ import com.adityakarang.sampahku.model.TukarSampahModel
 interface DatabaseDao {
 
     @Query("SELECT * FROM tbl_banksampah")
-    fun getAll(): LiveData<List<TukarSampahModel>>
+    fun getallSampah(): LiveData<List<TukarSampahModel>>
 
     @Query("SELECT SUM(harga) FROM tbl_banksampah")
-    fun getSaldo(): LiveData<Int>
+    fun getsaldoSampah(): LiveData<Int>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertData(modelDatabases: TukarSampahModel)
+    fun insertdataSampah(modelDatabases: TukarSampahModel)
 
     @Query("DELETE FROM tbl_banksampah WHERE uid= :uid")
-    fun deleteSingleData(uid: Int)
+    fun singledataDLT(uid: Int)
 
 }

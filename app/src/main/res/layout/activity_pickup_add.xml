@@ -11,25 +11,38 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@color/green"
-            android:orientation="horizontal">
-
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/action_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:layout_width="356dp"
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/warning_msg"
+                android:layout_centerInParent="true"
+                android:text="@string/adddata_msg"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-        </LinearLayout>
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_back" />
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,11 +101,6 @@
                 android:textSize="16sp" />
 
         </LinearLayout>
-
-
-
-
-
 
         <LinearLayout
             android:layout_width="match_parent"

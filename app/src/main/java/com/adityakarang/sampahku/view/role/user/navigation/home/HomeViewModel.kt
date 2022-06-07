@@ -17,8 +17,8 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
     init {
         databaseDao = DbClient.getInstance(application)?.appDatabase?.databaseDao()
-        dataBank = databaseDao!!.getAll()
-        totalSaldo = databaseDao!!.getSaldo()
+        dataBank = databaseDao!!.getallSampah()
+        totalSaldo = databaseDao!!.getsaldoSampah()
     }
 
 

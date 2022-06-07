@@ -1,16 +1,11 @@
 package com.adityakarang.sampahku.view.role.user.activities.dashboard
 
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.WindowInsets
-import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import com.adityakarang.sampahku.R
 import com.adityakarang.sampahku.databinding.ActivityDashboardUserBinding
-import com.adityakarang.sampahku.view.auth.login.LoginActivity
-import com.adityakarang.sampahku.view.main.MainActivity
 import com.adityakarang.sampahku.view.role.user.activities.scan.ScanSampahActivity
 import com.adityakarang.sampahku.view.role.user.navigation.home.HomeFragment
 import com.adityakarang.sampahku.view.role.user.navigation.notifications.NotificationsFragment
@@ -64,13 +59,6 @@ class UserDashboardActivity : AppCompatActivity() {
 
         binding.bottomNavigation.background = null
         binding.bottomNavigation.menu.getItem(2).isEnabled = false
-//        userCheck()
-
-//        binding.btnLogout.setOnClickListener {
-//            auth.signOut()
-//            startActivity(Intent(this, MainActivity::class.java))
-//            finish()
-//        }
 
         val navView : BottomNavigationView = findViewById(R.id.bottomNavigation)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
@@ -91,15 +79,5 @@ class UserDashboardActivity : AppCompatActivity() {
             }
         }
     }
-//    private fun userCheck() {
-//        val firebaseUser = auth.currentUser
-//        if (firebaseUser == null){
-//          binding.tvEmail.text = "Not Logged in"
-//        }
-//        else{
-//            val email = firebaseUser.email
-//
-//            binding.tvEmail.text = email
-//        }
-//    }
+
 }

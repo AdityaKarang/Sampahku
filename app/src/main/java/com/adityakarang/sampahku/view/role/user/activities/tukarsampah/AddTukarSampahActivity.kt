@@ -1,8 +1,6 @@
 package com.adityakarang.sampahku.view.role.user.activities.tukarsampah
 
 
-import android.app.ProgressDialog
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -15,24 +13,21 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.adityakarang.sampahku.R
 import com.adityakarang.sampahku.databinding.ActivityTukarSampahAddBinding
-import com.adityakarang.sampahku.utils.FunctionHelper.rupiahFormat
-import com.adityakarang.sampahku.view.role.user.activities.pickup.PickupActivity
-import com.adityakarang.sampahku.view.role.user.navigation.home.HomeFragment
+import com.adityakarang.sampahku.utils.HelpFunction.rpFormat
 import com.google.firebase.auth.FirebaseAuth
 
 class AddTukarSampahActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTukarSampahAddBinding
-    private lateinit var progressDialog: ProgressDialog
     lateinit var tukarsampahVM: TukarSampahViewModel
     lateinit var Nama: String
-    lateinit var KategoriSelect: String
+    lateinit var JenisSelect: String
     lateinit var HargaSelect: String
-    lateinit var Kategori: Array<String>
+    lateinit var Jenis: Array<String>
     lateinit var Harga: Array<String>
-    var countTotal = 0
-    var countBerat = 0
-    var countHarga = 0
+    var hitungTotal = 0
+    var hitungBerat = 0
+    var hitungHarga = 0
 
     private lateinit var auth: FirebaseAuth
 
@@ -49,7 +44,9 @@ class AddTukarSampahActivity : AppCompatActivity() {
             addData()
         }
 
-
+        binding.btnBack.setOnClickListener {
+            onBackPressed()
+        }
 
         setupInitLayout()
         setupInputData()
@@ -62,8 +59,8 @@ class AddTukarSampahActivity : AppCompatActivity() {
 
     private fun setupInitLayout() {
 
-        Kategori = resources.getStringArray(R.array.kategori_sampah)
-        Harga = resources.getStringArray(R.array.harga_perkilo)
+        Jenis = resources.getStringArray(R.array.kategori_sampah)
+        Harga = resources.getStringArray(R.array.harga_sampah)
 
         tukarsampahVM = ViewModelProvider(
             this,
@@ -71,9 +68,9 @@ class AddTukarSampahActivity : AppCompatActivity() {
         ).get(TukarSampahViewModel::class.java)
 
         binding.apply {
-        val arrayBahasa = ArrayAdapter(this@AddTukarSampahActivity, android.R.layout.simple_list_item_1, Kategori)
-        arrayBahasa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        jenisampahET.setAdapter(arrayBahasa)
+        val array = ArrayAdapter(this@AddTukarSampahActivity, android.R.layout.simple_list_item_1, Jenis)
+        array.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        jenisampahET.setAdapter(array)
 
         jenisampahET.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -82,15 +79,15 @@ class AddTukarSampahActivity : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                KategoriSelect = parent.getItemAtPosition(position).toString()
+                JenisSelect = parent.getItemAtPosition(position).toString()
                 HargaSelect = Harga[position]
                 jenisampahET.setEnabled(true)
-                countHarga = HargaSelect.toInt()
+                hitungHarga = HargaSelect.toInt()
                 if (inputberatET.getText().toString() != "") {
-                    countBerat = inputberatET.getText().toString().toInt()
-                    setupTotalPrice(countBerat)
+                    hitungBerat = inputberatET.getText().toString().toInt()
+                    setupTotalPrice(hitungBerat)
                 } else {
-                    inputhargaET.setText(rupiahFormat(countHarga))
+                    inputhargaET.setText(rpFormat(hitungHarga))
                 }
             }
 
@@ -103,10 +100,10 @@ class AddTukarSampahActivity : AppCompatActivity() {
             override fun afterTextChanged(editable: Editable) {
                 inputberatET.removeTextChangedListener(this)
                 if (editable.length > 0) {
-                    countBerat = editable.toString().toInt()
-                    setupTotalPrice(countBerat)
+                    hitungBerat = editable.toString().toInt()
+                    setupTotalPrice(hitungBerat)
                 } else {
-                    inputhargaET.setText(rupiahFormat(countHarga))
+                    inputhargaET.setText(rpFormat(hitungHarga))
                 }
                 inputberatET.addTextChangedListener(this)
             }
@@ -116,8 +113,8 @@ class AddTukarSampahActivity : AppCompatActivity() {
 
     private fun setupTotalPrice(berat: Int) {
         binding.apply {
-            countTotal = countHarga * berat
-            inputhargaET.setText(rupiahFormat(countTotal))
+            hitungTotal = hitungHarga * berat
+            inputhargaET.setText(rpFormat(hitungTotal))
         }
     }
 
@@ -127,7 +124,7 @@ class AddTukarSampahActivity : AppCompatActivity() {
         binding.apply {
         btnTukar.setOnClickListener { v: View? ->
             Nama = namaET.text.toString()
-            if (Nama.isEmpty() or (Kategori.size == 0) or (countBerat == 0) or (countHarga == 0)) {
+            if (Nama.isEmpty() or (Jenis.size == 0) or (hitungBerat == 0) or (hitungHarga == 0)) {
                 Toast.makeText(
                     this@AddTukarSampahActivity,
                     "Mohon Lengkapi Data!",
@@ -136,16 +133,14 @@ class AddTukarSampahActivity : AppCompatActivity() {
             } else {
                 tukarsampahVM.addData(
                     Nama,
-                    KategoriSelect,
-                    countBerat,
-                    countTotal
+                    JenisSelect,
+                    hitungBerat,
+                    hitungTotal
                 )
                 Toast.makeText(
                     this@AddTukarSampahActivity,
                     "Tukar Sampah Berhasil",
                     Toast.LENGTH_SHORT).show()
-                startActivity(Intent(this@AddTukarSampahActivity, TukarSampahActivity::class.java))
-                finish()
             }
         }
         }

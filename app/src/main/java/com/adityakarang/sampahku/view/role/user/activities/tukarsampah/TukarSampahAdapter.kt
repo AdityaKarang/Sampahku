@@ -6,11 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.adityakarang.sampahku.databinding.RiwayatTukarBinding
 import com.adityakarang.sampahku.model.TukarSampahModel
-import com.adityakarang.sampahku.utils.FunctionHelper.rupiahFormat
+import com.adityakarang.sampahku.utils.HelpFunction.rpFormat
 
 class TukarSampahAdapter(
     var mContext: Context,
@@ -38,7 +37,7 @@ class TukarSampahAdapter(
         holder.tvNama.setText(data.namaPengguna)
         holder.tvKategori.text = "Sampah " + data.jenisSampah
         holder.tvBerat.text = "Berat : " + data.berat.toString() + " Kg"
-        holder.tvSaldo.text = "Pendapatan : " + rupiahFormat(data.harga)
+        holder.tvSaldo.text = "Pendapatan : " + rpFormat(data.harga)
 
     }
 
@@ -51,8 +50,7 @@ class TukarSampahAdapter(
         var tvKategori: TextView = itemView.tvKategori
         var tvBerat: TextView = itemView.tvBerat
         var tvSaldo: TextView = itemView.tvSaldo
-        var tvStatus: TextView = itemView.tvStatus
-        var imageDelete: ImageView = itemView.imageDelete
+        var imageDelete: TextView = itemView.imageTukar
 
         init {
             imageDelete.setOnClickListener { view: View? ->

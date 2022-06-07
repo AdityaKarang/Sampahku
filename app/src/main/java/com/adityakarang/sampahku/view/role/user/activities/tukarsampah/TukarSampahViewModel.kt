@@ -27,7 +27,7 @@ class TukarSampahViewModel(application: Application) : AndroidViewModel(applicat
             val modelDatabase = TukarSampahModel(
             namaPengguna = nama_pengguna, jenisSampah = jenis_sampah, berat = berat, harga = harga
             )
-            databaseDao?.insertData(modelDatabase)
+            databaseDao?.insertdataSampah(modelDatabase)
         }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -36,7 +36,7 @@ class TukarSampahViewModel(application: Application) : AndroidViewModel(applicat
 
     fun deleteDataById(uid: Int) {
         Completable.fromAction {
-            databaseDao?.deleteSingleData(uid)
+            databaseDao?.singledataDLT(uid)
         }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -45,8 +45,8 @@ class TukarSampahViewModel(application: Application) : AndroidViewModel(applicat
 
     init {
         databaseDao = getInstance(application)?.appDatabase?.databaseDao()
-        dataBank = databaseDao!!.getAll()
-        totalSaldo = databaseDao!!.getSaldo()
+        dataBank = databaseDao!!.getallSampah()
+        totalSaldo = databaseDao!!.getsaldoSampah()
     }
 
 }

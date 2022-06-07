@@ -18,7 +18,7 @@ class RiwayatViewModel(application: Application) : AndroidViewModel(application)
 
     fun deleteDataById(uid: Int) {
         Completable.fromAction {
-            databaseDao?.deleteSingleData(uid)
+            databaseDao?.singledataDLT(uid)
         }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -27,8 +27,8 @@ class RiwayatViewModel(application: Application) : AndroidViewModel(application)
 
     init {
         databaseDao = getInstance(application)?.appDatabase?.databaseDao()
-        dataBank = databaseDao!!.getAll()
-        totalSaldo = databaseDao!!.getSaldo()
+        dataBank = databaseDao!!.getallSampah()
+        totalSaldo = databaseDao!!.getsaldoSampah()
     }
 
 }

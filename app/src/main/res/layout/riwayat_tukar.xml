@@ -71,7 +71,6 @@
             android:id="@+id/tvStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Berhasil"
             android:textColor="@color/green"
             android:layout_marginTop="20dp"
             android:textSize="16sp"
@@ -80,13 +79,18 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageDelete"
+    <TextView
+        android:id="@+id/imageTukar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
+        android:drawableStart="@drawable/ic_tukar"
+        android:textColor="@color/green"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/point_msg_2"
         android:layout_margin="15dp"
         android:src="@drawable/ic_tukar"
         app:tint="@color/green" />
+
 
 </androidx.cardview.widget.CardView>

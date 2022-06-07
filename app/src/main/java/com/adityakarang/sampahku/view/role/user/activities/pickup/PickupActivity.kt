@@ -3,12 +3,9 @@ package com.adityakarang.sampahku.view.role.user.activities.pickup
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.adityakarang.sampahku.adapter.KategoriAdapter
 import com.adityakarang.sampahku.adapter.PickupAdapter
 import com.adityakarang.sampahku.databinding.ActivityPickupBinding
-import com.adityakarang.sampahku.model.KategoriModel
 import com.adityakarang.sampahku.model.PickupModel
-import com.adityakarang.sampahku.view.role.admin.activities.KategoriActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError

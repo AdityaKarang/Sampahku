@@ -12,7 +12,7 @@
     <string name="text_banner_1">Selamat datang di Sampahku!</string>
     <string name="text_banner_2">Sampahku adalah solusi untuk mengatasi masalah sampah di lingkungan anda</string>
     <string name="point_msg_1">Saldo Anda</string>
-    <string name="point_msg_2">Tukar Point</string>
+    <string name="point_msg_2">Tukar Saldo</string>
     <string name="menu_kategori">Menu</string>
     <string name="img_banner">Image</string>
     <string name="pickup_msg">Pickup Sampah</string>
@@ -20,7 +20,7 @@
     <string name="tukar_msg">Tukar Sampah</string>
     <string name="donasi_msg">Donasi Sampah</string>
     <string name="warning_msg">Masukan data dengan benar!</string>
-
+    <string name="adddata_msg">Masukan Data Dengan Benar!</string>
     <string name="pickup">Ajukan Pickup</string>
     <string name="pickup_tgl">Tanggal pickup</string>
     <string name="pickup_alamat">Alamat</string>
@@ -60,7 +60,7 @@
         <item>Kertas</item>
         <item>Karet</item>
     </string-array>
-    <string-array name="harga_perkilo">
+    <string-array name="harga_sampah">
         <item>1500</item>
         <item>3000</item>
         <item>800</item>

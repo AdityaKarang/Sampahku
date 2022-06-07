@@ -19,7 +19,6 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.adityakarang.sampahku.databinding.ActivityCameraBinding
 import com.adityakarang.sampahku.utils.createFile
-import java.nio.file.Files.createFile
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -96,37 +95,6 @@ class CameraActivity : AppCompatActivity() {
         cameraExecutor.shutdown()
     }
 
-//    private fun takePhoto() {
-//        val imageCapture = imageCapture ?: return
-//
-//        val photoFile = createFile(application)
-//
-//        val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
-//        imageCapture.takePicture(
-//            outputOptions,
-//            ContextCompat.getMainExecutor(this),
-//            object : ImageCapture.OnImageSavedCallback {
-//                override fun onError(exc: ImageCaptureException) {
-//                    Toast.makeText(
-//                        this@CameraActivity,
-//                        "Can't take the picture.",
-//                        Toast.LENGTH_SHORT
-//                    ).show()
-//                }
-//
-//                override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-//                    val intent = Intent()
-//                    intent.putExtra("picture", photoFile)
-//                    intent.putExtra(
-//                        "isBackCamera",
-//                        cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
-//                    )
-//                    setResult(AddStoryActivity.CAMERA_X_RESULT, intent)
-//                    finish()
-//                }
-//            }
-//        )
-//    }
 
     private fun startCamera() {
         val cameraProviderFuture = ProcessCameraProvider.getInstance(this)

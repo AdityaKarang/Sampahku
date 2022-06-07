@@ -4,9 +4,9 @@ import java.text.DecimalFormat
 
 
 
-object FunctionHelper {
+object HelpFunction {
 
-    fun rupiahFormat(price: Int): String {
+    fun rpFormat(price: Int): String {
         val formatter = DecimalFormat("#,###")
         return "Rp " + formatter.format(price.toLong())
     }

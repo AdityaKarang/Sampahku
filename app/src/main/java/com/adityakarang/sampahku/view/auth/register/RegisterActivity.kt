@@ -4,13 +4,10 @@ import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.app.ProgressDialog
 import android.content.Intent
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
-import android.view.WindowInsets
-import android.view.WindowManager
 import android.widget.Toast
 import com.adityakarang.sampahku.databinding.ActivityRegisterBinding
 import com.adityakarang.sampahku.view.auth.login.LoginActivity
@@ -44,31 +41,6 @@ class RegisterActivity : AppCompatActivity() {
         setAction()
         playAnimation()
     }
-
-
-//
-
-//
-//            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-//                binding.emailEditText.error = "Email tidak valid"
-//                binding.emailEditText.requestFocus()
-//                return@setOnClickListener
-//            }
-//
-//            if (password.isEmpty() || password.length < 6){
-//                binding.passwordEditText.error = "Password harus lebih dari 6 karakter"
-//                binding.passwordEditText.requestFocus()
-//                return@setOnClickListener
-//            }
-//
-//            userRegister(email, password)
-//        }
-//
-//        binding.login.setOnClickListener {
-//            startActivity(Intent(this@RegisterActivity, LoginActivity::class.java).apply {
-//                startActivity(this)
-//            })
-//        }
 
     private var name = ""
     private var email = ""

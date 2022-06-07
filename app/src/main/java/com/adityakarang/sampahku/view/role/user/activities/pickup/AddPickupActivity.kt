@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.adityakarang.sampahku.databinding.ActivityPickupAddBinding
-
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -33,6 +32,10 @@ class AddPickupActivity : AppCompatActivity() {
 
         binding.btnPickup.setOnClickListener {
             validateData()
+        }
+
+        binding.btnBack.setOnClickListener {
+            onBackPressed()
         }
 
     }
@@ -84,7 +87,7 @@ class AddPickupActivity : AppCompatActivity() {
             .setValue(hashMap)
             .addOnSuccessListener {
                 progressDialog.dismiss()
-                Toast.makeText(this, "Pickup Berhasil", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Pickup Berhasil Mohon Ditunggu", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this@AddPickupActivity, PickupActivity::class.java))
                 finish()
             }

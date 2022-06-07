@@ -3,11 +3,8 @@ package com.adityakarang.sampahku.view.main
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.view.WindowInsets
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.adityakarang.sampahku.databinding.ActivityMainBinding
 import com.adityakarang.sampahku.view.auth.login.LoginActivity

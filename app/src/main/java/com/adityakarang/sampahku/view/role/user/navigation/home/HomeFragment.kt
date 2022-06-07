@@ -1,6 +1,5 @@
 package com.adityakarang.sampahku.view.role.user.navigation.home
 
-import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,12 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.adityakarang.sampahku.databinding.FragmentHomeBinding
-import com.adityakarang.sampahku.utils.FunctionHelper
-import com.adityakarang.sampahku.view.role.user.activities.informasisampah.InformasiActivity
+import com.adityakarang.sampahku.utils.HelpFunction
 import com.adityakarang.sampahku.view.role.user.activities.lokasi.LocationActivity
-import com.adityakarang.sampahku.view.role.user.activities.lokasi.LokasiActivity
 import com.adityakarang.sampahku.view.role.user.activities.pickup.PickupActivity
-import com.adityakarang.sampahku.view.role.user.activities.tukarsampah.AddTukarSampahActivity
 import com.adityakarang.sampahku.view.role.user.activities.tukarsampah.TukarSampahActivity
 
 
@@ -41,10 +37,10 @@ class HomeFragment : Fragment() {
        homeVM.totalSaldo.observe(viewLifecycleOwner) { integer ->
            if (integer == null) {
                val jumlahSaldo = 0
-               val initSaldo = FunctionHelper.rupiahFormat(jumlahSaldo)
+               val initSaldo = HelpFunction.rpFormat(jumlahSaldo)
                binding!!.tvPoint.text = initSaldo
            } else {
-               val initSaldo = FunctionHelper.rupiahFormat(integer)
+               val initSaldo = HelpFunction.rpFormat(integer)
                binding!!.tvPoint.text = initSaldo
            }
        }
