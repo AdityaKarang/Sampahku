@@ -54,7 +54,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:layout_editor_absoluteX="-16dp"
             tools:layout_editor_absoluteY="-131dp"
-            tools:listitem="@layout/riwayat_item" />
+            tools:listitem="@layout/riwayat_pickup" />
     </androidx.core.widget.NestedScrollView>
 
     <Button

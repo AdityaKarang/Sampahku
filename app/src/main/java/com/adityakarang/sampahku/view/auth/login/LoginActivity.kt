@@ -141,64 +141,6 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-
-//    private fun setAction() {
-
-//            }
-//
-//            btnLogin.setOnClickListener {
-//                val email = binding.emailEditText.text.toString()
-//                val password = binding.passwordEditText.text.toString()
-//
-//                if (email.isEmpty()){
-//                    binding.emailEditText.error = "Masukan email terlebih dahulu"
-//                    binding.emailEditText.requestFocus()
-//                    return@setOnClickListener
-//                }
-//
-//                if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-//                    binding.emailEditText.error = "Email tidak valid"
-//                    binding.emailEditText.requestFocus()
-//                    return@setOnClickListener
-//                }
-//
-//                if (password.isEmpty() || password.length < 6){
-//                    binding.passwordEditText.error = "Password harus lebih dari 6 karakter"
-//                    binding.passwordEditText.requestFocus()
-//                    return@setOnClickListener
-//                }
-//
-//                userLogin(email, password)
-//            }
-//        }
-//    }
-//
-//    private fun userLogin(email: String, password: String) {
-//
-//        auth.signInWithEmailAndPassword(email, password)
-//            .addOnCompleteListener(this){
-//                if (it.isSuccessful){
-//                    Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show()
-//                    Intent(this@LoginActivity, MainActivity::class.java).also {
-//                        it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//                        startActivity(it)
-//                    }
-//                }else{
-//                    Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
-//                }
-//            }
-//    }
-
-//    override fun onStart() {
-//        super.onStart()
-//        if (auth.currentUser != null) {
-//            Intent(this@LoginActivity, MainActivity::class.java).also {
-//                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//                startActivity(it)
-//            }
-//        }
-//    }
-
     private fun playAnimation() {
         ObjectAnimator.ofFloat(binding.imgView, View.TRANSLATION_X, -30f, 30f).apply {
             duration = 6000

@@ -20,7 +20,7 @@ class PickupActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPickupBinding
 
     private lateinit var auth: FirebaseAuth
-    private  lateinit var pickupArrayList: ArrayList<PickupModel>
+    private lateinit var pickupArrayList: ArrayList<PickupModel>
     private lateinit var adapter: PickupAdapter
 
 
@@ -60,8 +60,6 @@ class PickupActivity : AppCompatActivity() {
                     TODO("Not yet implemented")
                 }
             })
-
-
     }
 
     private fun setAction(){

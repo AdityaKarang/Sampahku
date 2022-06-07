@@ -4,9 +4,17 @@ import android.content.Intent
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.adityakarang.sampahku.databinding.ActivityScanSampahBinding
 import com.adityakarang.sampahku.utils.rotateBitmap
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.File
 
 class ScanSampahActivity : AppCompatActivity() {
@@ -50,4 +58,5 @@ class ScanSampahActivity : AppCompatActivity() {
             binding.imageView.setImageBitmap(result)
         }
     }
+
 }

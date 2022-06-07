@@ -1,5 +1,6 @@
 package com.adityakarang.sampahku.view.role.user.navigation.home
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -30,6 +31,7 @@ class HomeFragment : Fragment() {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding!!.root
         return root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -65,13 +67,14 @@ class HomeFragment : Fragment() {
             }
         }
 
-//        binding!!.tvInformasi.setOnClickListener {
-//            Intent(requireActivity(), InformasiActivity::class.java).apply {
-//                startActivity(this)
-//            }
-//        }
-    }
+        binding!!.tukar.setOnClickListener {
+            Intent(requireActivity(), TukarSampahActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
 
+
+    }
 
 
 

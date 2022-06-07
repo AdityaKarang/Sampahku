@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
-import com.adityakarang.sampahku.databinding.RiwayatItemBinding
+import com.adityakarang.sampahku.databinding.RiwayatPickupBinding
 import com.adityakarang.sampahku.filter.PickupFilter
 import com.adityakarang.sampahku.model.PickupModel
 import com.google.firebase.database.FirebaseDatabase
@@ -16,7 +16,7 @@ class PickupAdapter : RecyclerView.Adapter<PickupAdapter.HolderPickup>, Filterab
 
     private val context: Context
     public var pickupArrayList: ArrayList<PickupModel>
-    private lateinit var binding: RiwayatItemBinding
+    private lateinit var binding: RiwayatPickupBinding
     private var filterlist: ArrayList<PickupModel>
 
     private var filter: PickupFilter? = null
@@ -37,7 +37,7 @@ class PickupAdapter : RecyclerView.Adapter<PickupAdapter.HolderPickup>, Filterab
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderPickup {
-        binding = RiwayatItemBinding.inflate(LayoutInflater.from(context), parent, false)
+        binding = RiwayatPickupBinding.inflate(LayoutInflater.from(context), parent, false)
 
         return HolderPickup(binding.root)
     }
@@ -60,10 +60,10 @@ class PickupAdapter : RecyclerView.Adapter<PickupAdapter.HolderPickup>, Filterab
 
         holder.riwayatdlt.setOnClickListener {
             val builder = AlertDialog.Builder(context)
-            builder.setTitle("Hapus")
-                .setMessage("Apakah ?")
-                .setPositiveButton("Konfirmasi"){a, d->
-                    Toast.makeText(context, "Menghapus Kategori...", Toast.LENGTH_SHORT).show()
+            builder.setTitle("Hapus Riwayat")
+                .setMessage("Apakah anda yakin untuk menghapus riwayat ini?")
+                .setPositiveButton("Hapus"){a, d->
+                    Toast.makeText(context, "Menghapus riwayat...", Toast.LENGTH_SHORT).show()
                     deleteKategori(model, holder)
                 }
                 .setNegativeButton("Batal"){a, d->

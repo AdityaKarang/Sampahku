@@ -1,6 +1,7 @@
 package com.adityakarang.sampahku.view.role.user.activities.tukarsampah
 
 
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -22,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth
 class AddTukarSampahActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTukarSampahAddBinding
+    private lateinit var progressDialog: ProgressDialog
     lateinit var tukarsampahVM: TukarSampahViewModel
     lateinit var Nama: String
     lateinit var KategoriSelect: String
@@ -46,6 +48,8 @@ class AddTukarSampahActivity : AppCompatActivity() {
         binding.btnTukar.setOnClickListener {
             addData()
         }
+
+
 
         setupInitLayout()
         setupInputData()
@@ -118,6 +122,8 @@ class AddTukarSampahActivity : AppCompatActivity() {
     }
 
     private fun setupInputData() {
+
+
         binding.apply {
         btnTukar.setOnClickListener { v: View? ->
             Nama = namaET.text.toString()

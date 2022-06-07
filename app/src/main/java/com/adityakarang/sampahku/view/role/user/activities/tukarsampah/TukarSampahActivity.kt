@@ -61,11 +61,11 @@ class TukarSampahActivity : AppCompatActivity(), TukarSampahAdapter.TukarSampahA
 
     override fun onDelete(tukarSampahModel: TukarSampahModel?) {
         val alertDialogBuilder = AlertDialog.Builder(this)
-        alertDialogBuilder.setMessage("Hapus riwayat ini?")
-        alertDialogBuilder.setPositiveButton("Ya, Hapus") { dialogInterface: DialogInterface?, i: Int ->
+        alertDialogBuilder.setMessage("Apa anda yakin ingin menukar saldo?")
+        alertDialogBuilder.setPositiveButton("Tukar") { dialogInterface: DialogInterface?, i: Int ->
             val uid = tukarSampahModel!!.uid
             tukarsampahVM.deleteDataById(uid)
-            Toast.makeText(this@TukarSampahActivity, "Data yang dipilih sudah dihapus", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@TukarSampahActivity, "Berhasil menukar saldo", Toast.LENGTH_SHORT).show()
         }
 
         alertDialogBuilder.setNegativeButton("Batal") { dialogInterface: DialogInterface, i: Int -> dialogInterface.cancel() }
