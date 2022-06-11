@@ -5,7 +5,14 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
     <uses-feature android:name="android.hardware.camera" />
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -15,13 +22,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+
         <activity
             android:name=".view.role.user.activities.scan.CameraActivity"
             android:exported="false" />
 
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCj5SkaElmuRdjzt4sPLKTMCbGOHbwVJbk" />
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <activity
             android:name=".view.role.user.activities.lokasi.LocationActivity"
@@ -41,37 +50,23 @@
             android:exported="false" />
         <activity
             android:name=".view.role.user.activities.scan.ScanSampahActivity"
+            android:exported="false"
             android:label="Scan Sampah"
-            android:parentActivityName=".view.role.user.activities.dashboard.UserDashboardActivity"
-            android:exported="false" />
+            android:parentActivityName=".view.role.user.activities.dashboard.UserDashboardActivity" />
         <activity
             android:name=".view.role.user.activities.tukarsampah.AddTukarSampahActivity"
             android:exported="false" />
         <activity
             android:name=".view.role.user.activities.informasisampah.InformasiActivity"
             android:exported="false" />
-        <activity
-            android:name=".view.role.user.activities.lokasi.LokasiActivity"
-            android:exported="false" />
+
         <activity
             android:name=".view.role.user.activities.dashboard.UserDashboardActivity"
             android:exported="false" />
         <activity
             android:name=".view.role.admin.dashboard.AdminDashboardActivity"
             android:exported="false" />
-        <activity
-            android:name=".view.role.admin.banksampahprofile.EditProfileBSActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.role.admin.banksampahprofile.ProfileBSActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.role.user.nasabahprofile.EditProfileActivity"
-            android:exported="false"
-            tools:ignore="Instantiatable" />
-        <activity
-            android:name=".view.role.user.nasabahprofile.ProfileNasabahActivity"
-            android:exported="false" />
+
         <activity
             android:name=".view.role.user.activities.pickup.AddPickupActivity"
             android:exported="false" />

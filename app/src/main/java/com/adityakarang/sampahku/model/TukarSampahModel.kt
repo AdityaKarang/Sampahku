@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
 
-@Entity(tableName = "tbl_banksampah")
+@Entity(tableName = "tbl_tukarsampah")
 @Parcelize
 data class TukarSampahModel(
     @PrimaryKey(autoGenerate = true)

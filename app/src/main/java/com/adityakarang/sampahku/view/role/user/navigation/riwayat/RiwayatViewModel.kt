@@ -5,7 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import com.adityakarang.sampahku.database.DbClient.Companion.getInstance
 import com.adityakarang.sampahku.model.TukarSampahModel
-import com.adityakarang.sampahku.roomdb.DatabaseDao
+import com.adityakarang.sampahku.roomdb.DbDao
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -14,7 +14,7 @@ class RiwayatViewModel(application: Application) : AndroidViewModel(application)
 
     var totalSaldo: LiveData<Int>
     var dataBank: LiveData<List<TukarSampahModel>>
-    var databaseDao: DatabaseDao?
+    var databaseDao: DbDao?
 
     fun deleteDataById(uid: Int) {
         Completable.fromAction {
@@ -26,7 +26,7 @@ class RiwayatViewModel(application: Application) : AndroidViewModel(application)
     }
 
     init {
-        databaseDao = getInstance(application)?.appDatabase?.databaseDao()
+        databaseDao = getInstance(application)?.appDatabase?.dbDao()
         dataBank = databaseDao!!.getallSampah()
         totalSaldo = databaseDao!!.getsaldoSampah()
     }

@@ -20,7 +20,7 @@ class DbClient private constructor(context: Context) {
     }
 
     init {
-        appDatabase = Room.databaseBuilder(context, AppDatabase::class.java, "banksampah_db")
+        appDatabase = Room.databaseBuilder(context, AppDatabase::class.java, "banksampah_database")
             .fallbackToDestructiveMigration()
             .build()
     }

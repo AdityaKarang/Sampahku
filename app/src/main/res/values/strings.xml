@@ -90,6 +90,7 @@
     <string name="rp_1500">Rp. 1500</string>
     <string name="buat_pengajuan_pickup">Buat Pengajuan Pickup</string>
     <string name="pickup_sampah">Pickup Sampah</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 
 </resources>
