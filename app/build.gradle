@@ -39,6 +39,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        mlModelBinding true
     }
 }
 
@@ -49,6 +50,8 @@ dependencies {
     implementation "androidx.room:room-runtime:2.4.2"
     implementation 'com.google.android.gms:play-services-maps:18.0.2'
     implementation 'androidx.camera:camera-core:1.0.2'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
     kapt "androidx.room:room-compiler:2.4.2"
     kapt 'androidx.room:room-compiler:2.5.0-alpha02'
 
