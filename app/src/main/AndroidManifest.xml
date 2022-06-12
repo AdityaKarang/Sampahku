@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
@@ -24,18 +23,19 @@
         android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
 
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCj5SkaElmuRdjzt4sPLKTMCbGOHbwVJbk" />
+
+        <activity
+            android:name=".view.role.user.activities.lokasi.MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+
         <activity
             android:name=".view.role.user.activities.scan.CameraActivity"
             android:exported="false" />
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
-
-        <activity
-            android:name=".view.role.user.activities.lokasi.LocationActivity"
-            android:exported="false"
-            android:label="@string/title_activity_location" />
         <activity
             android:name=".view.role.user.activities.tukarsampah.TukarSampahActivity"
             android:exported="false" />
@@ -59,14 +59,12 @@
         <activity
             android:name=".view.role.user.activities.informasisampah.InformasiActivity"
             android:exported="false" />
-
         <activity
             android:name=".view.role.user.activities.dashboard.UserDashboardActivity"
             android:exported="false" />
         <activity
             android:name=".view.role.admin.dashboard.AdminDashboardActivity"
             android:exported="false" />
-
         <activity
             android:name=".view.role.user.activities.pickup.AddPickupActivity"
             android:exported="false" />

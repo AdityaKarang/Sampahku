@@ -5,17 +5,12 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Rect
-import android.graphics.drawable.Drawable
-import android.text.Editable
 import android.text.TextUtils
-import android.text.TextWatcher
 import android.util.AttributeSet
 import android.util.Patterns
-import android.view.MotionEvent
 import android.view.View
 import androidx.annotation.Nullable
 import androidx.appcompat.widget.AppCompatEditText
-import androidx.core.content.ContextCompat
 import androidx.core.widget.doAfterTextChanged
 import com.adityakarang.sampahku.R
 import com.adityakarang.sampahku.utils.sp
