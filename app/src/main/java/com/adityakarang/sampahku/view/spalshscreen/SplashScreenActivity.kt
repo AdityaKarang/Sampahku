@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.view.View
 import com.adityakarang.sampahku.databinding.ActivitySplashScreenBinding
 import com.adityakarang.sampahku.view.main.MainActivity
 import com.adityakarang.sampahku.view.role.admin.dashboard.AdminDashboardActivity
@@ -37,7 +36,6 @@ class SplashScreenActivity : AppCompatActivity() {
     private fun userCheck() {
         val firebaseUser = auth.currentUser
         if (firebaseUser == null) {
-            showLoading(true)
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         } else {
@@ -75,11 +73,4 @@ class SplashScreenActivity : AppCompatActivity() {
         }
     }
 
-    private fun showLoading(isLoading: Boolean) {
-        if (isLoading) {
-            binding.progressBar.visibility = View.VISIBLE
-        } else {
-            binding.progressBar.visibility = View.GONE
-        }
-    }
 }

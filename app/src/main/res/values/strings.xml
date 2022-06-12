@@ -55,16 +55,16 @@
     <string name="tukar_pendapatan">Total pendapatan</string>
 
     <string-array name="kategori_sampah">
-        <item>Plastik</item>
-        <item>Logam</item>
-        <item>Kertas</item>
-        <item>Karet</item>
+        <item>Plastic</item>
+        <item>Metal</item>
+        <item>Paper</item>
+        <item>Glass</item>
     </string-array>
     <string-array name="harga_sampah">
-        <item>1500</item>
-        <item>3000</item>
-        <item>800</item>
         <item>1000</item>
+        <item>4000</item>
+        <item>500</item>
+        <item>2000</item>
     </string-array>
 
     <string name="title_activity_home">HomeActivity</string>
@@ -76,7 +76,6 @@
     <string name="riwayat">Riwayat</string>
     <string name="title_activity_main">Sampahku</string>
     <string name="informasi_sampah">Informasi Sampah</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="nasabah_msg">Pickup Sampah</string>

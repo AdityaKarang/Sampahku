@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.adityakarang.sampahku.databinding.RiwayatPickupBinding
 import com.adityakarang.sampahku.filter.PickupFilter
@@ -60,17 +61,18 @@ class PickupAdapter : RecyclerView.Adapter<PickupAdapter.HolderPickup>, Filterab
 
         holder.riwayatdlt.setOnClickListener {
             val builder = AlertDialog.Builder(context)
-            builder.setTitle("Hapus Riwayat")
-                .setMessage("Apakah anda yakin untuk menghapus riwayat ini?")
-                .setPositiveButton("Hapus"){a, d->
-                    Toast.makeText(context, "Menghapus riwayat...", Toast.LENGTH_SHORT).show()
+            builder.setTitle("Pickup Sampah")
+                .setMessage("Apakah sampah anda sudah di pickup?")
+                .setPositiveButton("Ya"){a, d->
+                    Toast.makeText(context, "clearing...", Toast.LENGTH_SHORT).show()
                     deleteKategori(model, holder)
                 }
-                .setNegativeButton("Batal"){a, d->
+                .setNegativeButton("Tidak"){a, d->
                     a.dismiss()
                 }
                 .show()
         }
+
     }
 
     private fun deleteKategori(model: PickupModel, holder: HolderPickup) {

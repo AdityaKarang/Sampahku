@@ -99,7 +99,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="15dp"
-        android:src="@drawable/ic_delete"
+        android:src="@drawable/ic_check"
         android:background="@android:color/transparent"
         app:tint="@color/green" />
 

@@ -5,20 +5,9 @@
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
-
-    <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
-
     <item
         android:id="@+id/placeholder"
         android:title="" />
-
-    <item
-        android:id="@+id/navigation_riwayat"
-        android:icon="@drawable/ic_riwayat"
-        android:title="@string/riwayat" />
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_person"

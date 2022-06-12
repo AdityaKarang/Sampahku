@@ -8,9 +8,7 @@ import com.adityakarang.sampahku.R
 import com.adityakarang.sampahku.databinding.ActivityDashboardUserBinding
 import com.adityakarang.sampahku.view.role.user.activities.scan.ScanSampahActivity
 import com.adityakarang.sampahku.view.role.user.navigation.home.HomeFragment
-import com.adityakarang.sampahku.view.role.user.navigation.notifications.NotificationsFragment
 import com.adityakarang.sampahku.view.role.user.navigation.profile.ProfileFragment
-import com.adityakarang.sampahku.view.role.user.navigation.riwayat.RiwayatFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 
@@ -23,14 +21,6 @@ class UserDashboardActivity : AppCompatActivity() {
         when (item.itemId){
             R.id.navigation_home ->{
                 moveToFragment(HomeFragment())
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.navigation_notifications ->{
-                moveToFragment(NotificationsFragment())
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.navigation_riwayat ->{
-                moveToFragment(RiwayatFragment())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_profile ->{
@@ -57,7 +47,7 @@ class UserDashboardActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         binding.bottomNavigation.background = null
-        binding.bottomNavigation.menu.getItem(2).isEnabled = false
+        binding.bottomNavigation.menu.getItem(1).isEnabled = false
 
         val navView : BottomNavigationView = findViewById(R.id.bottomNavigation)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
