@@ -61,15 +61,14 @@ class RegisterActivity : AppCompatActivity() {
             Toast.makeText(this, "Masukan password terlebih dahulu", Toast.LENGTH_SHORT).show()
         } else if (confirmpass.isEmpty()) {
             Toast.makeText(this, "Konfirmasi Password terlebih dahulu", Toast.LENGTH_SHORT).show()
-        } else if (password != confirmpass){
+        } else if (password != confirmpass) {
             Toast.makeText(this, "Password tidak sama", Toast.LENGTH_SHORT).show()
-        }
-        else{
+        } else {
             createUserAcc()
         }
     }
 
-    private fun createUserAcc(){
+    private fun createUserAcc() {
 
         progressDialog.setMessage("Membuat akun...")
         progressDialog.show()
@@ -78,7 +77,7 @@ class RegisterActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 updateUser()
             }
-            .addOnFailureListener { e->
+            .addOnFailureListener { e ->
                 progressDialog.dismiss()
                 Toast.makeText(this, "Gagal membuat akun ${e.message}", Toast.LENGTH_SHORT).show()
 
@@ -110,7 +109,7 @@ class RegisterActivity : AppCompatActivity() {
                 startActivity(Intent(this@RegisterActivity, LoginActivity::class.java))
                 finish()
             }
-            .addOnFailureListener{e->
+            .addOnFailureListener { e ->
                 progressDialog.dismiss()
                 Toast.makeText(this, "Gagal menyimpan user ${e.message}", Toast.LENGTH_SHORT).show()
 

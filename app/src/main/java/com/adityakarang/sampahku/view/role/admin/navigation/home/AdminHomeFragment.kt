@@ -49,22 +49,5 @@ class AdminHomeFragment : Fragment() {
             }
         }
 
-//        binding!!.tvLokasi.setOnClickListener {
-//            Intent(requireActivity(), LokasiActivity::class.java).apply {
-//                startActivity(this)
-//            }
-//        }
-//
-//        binding!!.tvTukar.setOnClickListener {
-//            Intent(requireActivity(), TukarSampahActivity::class.java).apply {
-//                startActivity(this)
-//            }
-//        }
-//
-//        binding!!.tvInformasi.setOnClickListener {
-//            Intent(requireActivity(), InformasiActivity::class.java).apply {
-//                startActivity(this)
-//            }
-//        }
     }
 }

@@ -32,16 +32,15 @@ class KategoriActivity : AppCompatActivity() {
 
     }
 
-    private var kategori =""
+    private var kategori = ""
 
     private fun validateData() {
 
         kategori = binding.kategoriET.text.toString().trim()
 
-        if (kategori.isEmpty()){
+        if (kategori.isEmpty()) {
             Toast.makeText(this, "Masukan Kategori", Toast.LENGTH_SHORT).show()
-        }
-        else{
+        } else {
             addKategori()
         }
     }
@@ -64,7 +63,7 @@ class KategoriActivity : AppCompatActivity() {
                 progressDialog.dismiss()
                 Toast.makeText(this, "Berhasil Menambahkan kategori", Toast.LENGTH_SHORT).show()
             }
-            .addOnFailureListener{e->
+            .addOnFailureListener { e ->
                 progressDialog.dismiss()
                 Toast.makeText(this, "Gagal menyimpan ${e.message}", Toast.LENGTH_SHORT).show()
 

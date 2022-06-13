@@ -7,7 +7,6 @@
     tools:context=".view.role.user.activities.scan.ScanSampahActivity">
 
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
@@ -15,11 +14,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        app:srcCompat="@drawable/ic_img_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_img_view" />
 
     <TextView
         android:id="@+id/classified"
@@ -27,8 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:text="Jenis Sampah :"
         android:layout_marginTop="50dp"
+        android:text="Jenis Sampah :"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -56,11 +55,11 @@
         style="@style/ButtonGeneral"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginTop="70dp"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="60dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Take Picture"
         android:textAllCaps="false"

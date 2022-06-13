@@ -17,7 +17,7 @@ class InfomasiSampahActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityInfomasiSampahBinding
     private lateinit var auth: FirebaseAuth
-    private  lateinit var kategoriArrayList: ArrayList<KategoriModel>
+    private lateinit var kategoriArrayList: ArrayList<KategoriModel>
     private lateinit var adapter: KategoriAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +38,7 @@ class InfomasiSampahActivity : AppCompatActivity() {
         ref.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 kategoriArrayList.clear()
-                for (ds in snapshot.children){
+                for (ds in snapshot.children) {
                     val model = ds.getValue(KategoriModel::class.java)
 
                     kategoriArrayList.add(model!!)
@@ -48,17 +48,20 @@ class InfomasiSampahActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
             }
         })
     }
 
-    private fun setAction(){
+    private fun setAction() {
         binding.apply {
             kategoriAdd.setOnClickListener {
-                startActivity(Intent(this@InfomasiSampahActivity, KategoriActivity::class.java).apply {
-                    startActivity(this)
-                })
+                startActivity(
+                    Intent(
+                        this@InfomasiSampahActivity,
+                        KategoriActivity::class.java
+                    ).apply {
+                        startActivity(this)
+                    })
             }
         }
     }

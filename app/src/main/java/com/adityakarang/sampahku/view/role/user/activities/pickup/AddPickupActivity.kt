@@ -40,10 +40,10 @@ class AddPickupActivity : AppCompatActivity() {
 
     }
 
-    private var nama =""
-    private var jenis =""
-    private var berat =""
-    private var alamat =""
+    private var nama = ""
+    private var jenis = ""
+    private var berat = ""
+    private var alamat = ""
 
     private fun validateData() {
         nama = binding.namaET.text.toString().trim()
@@ -51,19 +51,18 @@ class AddPickupActivity : AppCompatActivity() {
         berat = binding.inputberatET.text.toString().trim()
         alamat = binding.inputalamatET.text.toString().trim()
 
-        if (nama.isEmpty()){
+        if (nama.isEmpty()) {
             Toast.makeText(this, "Masukan nama", Toast.LENGTH_SHORT).show()
         }
-        if (jenis.isEmpty()){
+        if (jenis.isEmpty()) {
             Toast.makeText(this, "Masukan jenis sampah", Toast.LENGTH_SHORT).show()
         }
-        if (berat.isEmpty()){
+        if (berat.isEmpty()) {
             Toast.makeText(this, "Masukan berat sampah", Toast.LENGTH_SHORT).show()
         }
-        if (alamat.isEmpty()){
+        if (alamat.isEmpty()) {
             Toast.makeText(this, "Masukan alamat", Toast.LENGTH_SHORT).show()
-        }
-        else{
+        } else {
             addData()
         }
     }
@@ -91,7 +90,7 @@ class AddPickupActivity : AppCompatActivity() {
                 startActivity(Intent(this@AddPickupActivity, PickupActivity::class.java))
                 finish()
             }
-            .addOnFailureListener{e->
+            .addOnFailureListener { e ->
                 progressDialog.dismiss()
                 Toast.makeText(this, "Gagal menyimpan ${e.message}", Toast.LENGTH_SHORT).show()
 

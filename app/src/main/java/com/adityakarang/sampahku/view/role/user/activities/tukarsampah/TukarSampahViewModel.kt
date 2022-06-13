@@ -25,7 +25,10 @@ class TukarSampahViewModel(application: Application) : AndroidViewModel(applicat
     ) {
         Completable.fromAction {
             val modelDatabase = TukarSampahModel(
-            namaPengguna = nama_pengguna, jenisSampah = jenis_sampah, berat = berat, harga = harga
+                namaPengguna = nama_pengguna,
+                jenisSampah = jenis_sampah,
+                berat = berat,
+                harga = harga
             )
             databaseDao?.insertdataSampah(modelDatabase)
         }

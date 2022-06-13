@@ -39,27 +39,27 @@ class PickupActivity : AppCompatActivity() {
     }
 
     private fun loadKategori() {
-            pickupArrayList = java.util.ArrayList()
-            val ref = FirebaseDatabase.getInstance().getReference("Pickup")
-            ref.addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    pickupArrayList.clear()
-                    for (ds in snapshot.children){
-                        val model = ds.getValue(PickupModel::class.java)
+        pickupArrayList = java.util.ArrayList()
+        val ref = FirebaseDatabase.getInstance().getReference("Pickup")
+        ref.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                pickupArrayList.clear()
+                for (ds in snapshot.children) {
+                    val model = ds.getValue(PickupModel::class.java)
 
-                        pickupArrayList.add(model!!)
-                    }
-                    adapter = PickupAdapter(this@PickupActivity, pickupArrayList)
-                    binding!!.listPickup.adapter = adapter
+                    pickupArrayList.add(model!!)
                 }
+                adapter = PickupAdapter(this@PickupActivity, pickupArrayList)
+                binding!!.listPickup.adapter = adapter
+            }
 
-                override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
-                }
-            })
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
     }
 
-    private fun setAction(){
+    private fun setAction() {
         binding.apply {
             pickupAdd.setOnClickListener {
                 startActivity(Intent(this@PickupActivity, AddPickupActivity::class.java).apply {

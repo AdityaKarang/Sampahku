@@ -7,208 +7,207 @@
     tools:context=".view.role.user.activities.tukarsampah.AddTukarSampahActivity">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@drawable/action_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/adddata_msg"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_back" />
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nama"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/namaET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/green"
+                android:hint="@string/masukan_nama_lengkap"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/relativeLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="?actionBarSize"
-                android:background="@drawable/action_bar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/welcome"
+                    android:id="@+id/jenis_sampah"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="@string/adddata_msg"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:text="@string/pickup_jenis"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
 
-                <ImageButton
-                    android:id="@+id/btnBack"
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/jenisampahET"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/jenis_sampah"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/spinner_bg"
+                    android:entries="@array/kategori_sampah"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/jenis_sampah"
+                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/ic_back" />
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_drop_down" />
 
             </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="20dp"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/nama"
+                    android:text="@string/tukar_berat"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/namaET"
+                    android:id="@+id/inputberatET"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:backgroundTint="@color/green"
-                    android:hint="@string/masukan_nama_lengkap"
+                    android:hint="@string/masukan_berat_sampah"
                     android:imeOptions="actionNext"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
             </LinearLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
                 android:orientation="vertical">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:text="@string/tukar_pendapatan"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
 
-                    <TextView
-                        android:id="@+id/jenis_sampah"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/pickup_jenis"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-
-                    <androidx.appcompat.widget.AppCompatSpinner
-                        android:id="@+id/jenisampahET"
-                        android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_below="@+id/jenis_sampah"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/spinner_bg"
-                        android:entries="@array/kategori_sampah"
-                        android:spinnerMode="dropdown" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/jenis_sampah"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:src="@drawable/ic_drop_down" />
-
-                </RelativeLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputhargaET"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/green"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/rp_1500"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
             </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginTop="20dp"
-                            android:layout_marginEnd="20dp"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/tukar_berat"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/inputberatET"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="50dp"
-                                    android:backgroundTint="@color/green"
-                                    android:hint="@string/masukan_berat_sampah"
-                                    android:imeOptions="actionNext"
-                                    android:inputType="number"
-                                    android:maxLines="1"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp" />
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/tukar_pendapatan"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/inputhargaET"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:backgroundTint="@color/green"
-                        android:focusableInTouchMode="false"
-                        android:hint="@string/rp_1500"
-                        android:maxLines="1"
-                        android:textColor="@color/black"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnTukar"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_margin="30dp"
-                android:text="@string/tukar_sampah"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:theme="@style/Theme.MaterialComponents"
-                app:backgroundTint="@color/green"
-                app:cornerRadius="50dp"
-                app:elevation="5dp"
-                app:rippleColor="@color/green" />
 
         </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTukar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="30dp"
+            android:text="@string/tukar_sampah"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:theme="@style/Theme.MaterialComponents"
+            app:backgroundTint="@color/green"
+            app:cornerRadius="50dp"
+            app:elevation="5dp"
+            app:rippleColor="@color/green" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="10dp"
+    android:layout_marginTop="12dp"
     android:layout_marginEnd="10dp"
     android:layout_marginBottom="10dp"
-    android:layout_marginTop="12dp"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp"
@@ -60,8 +60,7 @@
                 android:layout_weight="2"
                 android:text="Logam"
                 android:textColor="@color/black"
-                android:textSize="16sp"
-                />
+                android:textSize="16sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -86,8 +85,8 @@
             android:id="@+id/tvStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sedang dalam proses"
             android:layout_marginTop="20dp"
+            android:text="Sedang dalam proses"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -99,8 +98,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="15dp"
-        android:src="@drawable/ic_check"
         android:background="@android:color/transparent"
+        android:src="@drawable/ic_check"
         app:tint="@color/green" />
 
 </androidx.cardview.widget.CardView>

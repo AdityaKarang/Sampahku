@@ -4,7 +4,7 @@ import android.widget.Filter
 import com.adityakarang.sampahku.adapter.KategoriAdapter
 import com.adityakarang.sampahku.model.KategoriModel
 
-class KategoriFilter: Filter {
+class KategoriFilter : Filter {
 
     private var filterList: ArrayList<KategoriModel>
 
@@ -19,20 +19,19 @@ class KategoriFilter: Filter {
         var constraint = constraint
         val result = FilterResults()
 
-        if (constraint != null && constraint.isEmpty()){
+        if (constraint != null && constraint.isEmpty()) {
 
             constraint = constraint.toString().uppercase()
-            val filtermodel:ArrayList<KategoriModel> = ArrayList()
+            val filtermodel: ArrayList<KategoriModel> = ArrayList()
 
-            for (i in 0 until filterList.size){
-                if(filterList[i].kategori.uppercase().contains(constraint)){
+            for (i in 0 until filterList.size) {
+                if (filterList[i].kategori.uppercase().contains(constraint)) {
                     filtermodel.add(filterList[i])
                 }
             }
             result.count = filtermodel.size
             result.values = filtermodel
-        }
-        else{
+        } else {
             result.count = filterList.size
             result.values = filterList
 

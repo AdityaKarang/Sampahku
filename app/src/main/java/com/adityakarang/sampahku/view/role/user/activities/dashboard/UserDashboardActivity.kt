@@ -17,19 +17,20 @@ class UserDashboardActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDashboardUserBinding
     private lateinit var auth: FirebaseAuth
 
-    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener{ item ->
-        when (item.itemId){
-            R.id.navigation_home ->{
-                moveToFragment(HomeFragment())
-                return@OnNavigationItemSelectedListener true
+    private val onNavigationItemSelectedListener =
+        BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    moveToFragment(HomeFragment())
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.navigation_profile -> {
+                    moveToFragment(ProfileFragment())
+                    return@OnNavigationItemSelectedListener true
+                }
             }
-            R.id.navigation_profile ->{
-                moveToFragment(ProfileFragment())
-                return@OnNavigationItemSelectedListener true
-            }
+            false
         }
-        false
-    }
 
     private fun moveToFragment(fragment: Fragment) {
         val fragmentTrans = supportFragmentManager.beginTransaction()
@@ -49,19 +50,24 @@ class UserDashboardActivity : AppCompatActivity() {
         binding.bottomNavigation.background = null
         binding.bottomNavigation.menu.getItem(1).isEnabled = false
 
-        val navView : BottomNavigationView = findViewById(R.id.bottomNavigation)
+        val navView: BottomNavigationView = findViewById(R.id.bottomNavigation)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
         moveToFragment(HomeFragment())
 
         setAction()
     }
-    private fun setAction(){
+
+    private fun setAction() {
         binding.apply {
             floating.setOnClickListener {
-                startActivity(Intent(this@UserDashboardActivity, ScanSampahActivity::class.java).apply {
-                    startActivity(this)
-                })
+                startActivity(
+                    Intent(
+                        this@UserDashboardActivity,
+                        ScanSampahActivity::class.java
+                    ).apply {
+                        startActivity(this)
+                    })
             }
         }
     }

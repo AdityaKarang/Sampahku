@@ -20,14 +20,13 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-            playAnimation()
+        playAnimation()
 
         binding.btnMasuk.setOnClickListener {
             startActivity(Intent(this@MainActivity, LoginActivity::class.java))
             finish()
         }
     }
-
 
 
     private fun playAnimation() {

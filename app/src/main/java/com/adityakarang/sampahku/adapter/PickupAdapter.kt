@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.adityakarang.sampahku.databinding.RiwayatPickupBinding
 import com.adityakarang.sampahku.filter.PickupFilter
@@ -22,19 +21,19 @@ class PickupAdapter : RecyclerView.Adapter<PickupAdapter.HolderPickup>, Filterab
 
     private var filter: PickupFilter? = null
 
-    constructor(context:Context, pickupArrayList: ArrayList<PickupModel>) {
+    constructor(context: Context, pickupArrayList: ArrayList<PickupModel>) {
         this.context = context
         this.pickupArrayList = pickupArrayList
         this.filterlist = pickupArrayList
     }
 
 
-    inner class HolderPickup(itemView: View): RecyclerView.ViewHolder(itemView){
-        var tvName : TextView = binding.tvNama
-        var tvAlamat : TextView = binding.tvAlamat
-        var tvJenis : TextView = binding.tvJenis
-        var tvBerat : TextView = binding.tvBerat
-        var riwayatdlt : ImageButton = binding.riwayatDelete
+    inner class HolderPickup(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var tvName: TextView = binding.tvNama
+        var tvAlamat: TextView = binding.tvAlamat
+        var tvJenis: TextView = binding.tvJenis
+        var tvBerat: TextView = binding.tvBerat
+        var riwayatdlt: ImageButton = binding.riwayatDelete
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderPickup {
@@ -43,7 +42,7 @@ class PickupAdapter : RecyclerView.Adapter<PickupAdapter.HolderPickup>, Filterab
         return HolderPickup(binding.root)
     }
 
-    override fun onBindViewHolder(holder:HolderPickup, position: Int) {
+    override fun onBindViewHolder(holder: HolderPickup, position: Int) {
         val model = pickupArrayList[position]
         val id = model.id
         val nama = model.nama
@@ -53,7 +52,7 @@ class PickupAdapter : RecyclerView.Adapter<PickupAdapter.HolderPickup>, Filterab
         val uid = model.uid
         val timestamp = model.timestamp
 
-        holder.tvName.text =  nama
+        holder.tvName.text = nama
         holder.tvAlamat.text = "Alamat : " + alamat
         holder.tvJenis.text = "Jenis Sampah : " + jenis
         holder.tvBerat.text = "Berat : " + berat + " Kg"
@@ -63,11 +62,11 @@ class PickupAdapter : RecyclerView.Adapter<PickupAdapter.HolderPickup>, Filterab
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Pickup Sampah")
                 .setMessage("Apakah sampah anda sudah di pickup?")
-                .setPositiveButton("Ya"){a, d->
+                .setPositiveButton("Ya") { a, d ->
                     Toast.makeText(context, "clearing...", Toast.LENGTH_SHORT).show()
-                    deleteKategori(model, holder)
+                    dltData(model, holder)
                 }
-                .setNegativeButton("Tidak"){a, d->
+                .setNegativeButton("Tidak") { a, d ->
                     a.dismiss()
                 }
                 .show()
@@ -75,7 +74,7 @@ class PickupAdapter : RecyclerView.Adapter<PickupAdapter.HolderPickup>, Filterab
 
     }
 
-    private fun deleteKategori(model: PickupModel, holder: HolderPickup) {
+    private fun dltData(model: PickupModel, holder: HolderPickup) {
         val id = model.id
 
         val ref = FirebaseDatabase.getInstance().getReference("Pickup")
@@ -85,8 +84,12 @@ class PickupAdapter : RecyclerView.Adapter<PickupAdapter.HolderPickup>, Filterab
                 Toast.makeText(context, "Berhasil Menghapus", Toast.LENGTH_SHORT).show()
 
             }
-            .addOnFailureListener{e->
-                Toast.makeText(context, "unable to delete due to ${e.message}...", Toast.LENGTH_SHORT).show()
+            .addOnFailureListener { e ->
+                Toast.makeText(
+                    context,
+                    "unable to delete due to ${e.message}...",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
     }
 
@@ -95,7 +98,7 @@ class PickupAdapter : RecyclerView.Adapter<PickupAdapter.HolderPickup>, Filterab
     }
 
     override fun getFilter(): Filter {
-        if (filter == null){
+        if (filter == null) {
             filter = PickupFilter(filterlist, this)
         }
         return filter as PickupFilter

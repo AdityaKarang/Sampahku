@@ -71,8 +71,8 @@
             android:id="@+id/tvStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/green"
             android:layout_marginTop="20dp"
+            android:textColor="@color/green"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -84,12 +84,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:drawableStart="@drawable/ic_tukar"
-        android:textColor="@color/green"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/point_msg_2"
         android:layout_margin="15dp"
+        android:drawableStart="@drawable/ic_tukar"
+        android:fontFamily="@font/poppins_medium"
         android:src="@drawable/ic_tukar"
+        android:text="@string/point_msg_2"
+        android:textColor="@color/green"
         app:tint="@color/green" />
 
 

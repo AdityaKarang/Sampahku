@@ -18,7 +18,7 @@ class TukarSampahAdapter(
 
 
     var tukarSampahModel: MutableList<TukarSampahModel>
-    var mAdapterCallback:  TukarSampahAdapterCallback
+    var mAdapterCallback: TukarSampahAdapterCallback
 
     fun setDataAdapter(items: List<TukarSampahModel>) {
         tukarSampahModel.clear()

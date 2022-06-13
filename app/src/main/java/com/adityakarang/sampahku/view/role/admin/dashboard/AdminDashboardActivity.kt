@@ -17,27 +17,28 @@ class AdminDashboardActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
 
-    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener{item ->
-        when (item.itemId){
-            R.id.navigation_home_admin ->{
-                moveToFragment(AdminHomeFragment())
-                return@OnNavigationItemSelectedListener true
+    private val onNavigationItemSelectedListener =
+        BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home_admin -> {
+                    moveToFragment(AdminHomeFragment())
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.navigation_camera_admin -> {
+                    moveToFragment(AdminHomeFragment())
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.navigation_notifications_admin -> {
+                    moveToFragment(AdminHomeFragment())
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.navigation_profile_admin -> {
+                    moveToFragment(AdminHomeFragment())
+                    return@OnNavigationItemSelectedListener true
+                }
             }
-            R.id.navigation_camera_admin ->{
-                moveToFragment(AdminHomeFragment())
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.navigation_notifications_admin ->{
-                moveToFragment(AdminHomeFragment())
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.navigation_profile_admin ->{
-                moveToFragment(AdminHomeFragment())
-                return@OnNavigationItemSelectedListener true
-            }
+            false
         }
-        false
-    }
 
     private fun moveToFragment(fragment: Fragment) {
         val fragmentTrans = supportFragmentManager.beginTransaction()
@@ -63,19 +64,19 @@ class AdminDashboardActivity : AppCompatActivity() {
             userCheck()
         }
 
-        val navView : BottomNavigationView = findViewById(R.id.navigation)
+        val navView: BottomNavigationView = findViewById(R.id.navigation)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
         moveToFragment(AdminHomeFragment())
 
     }
+
     private fun userCheck() {
         val firebaseUser = auth.currentUser
-        if (firebaseUser == null){
+        if (firebaseUser == null) {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
-        }
-        else{
+        } else {
             val email = firebaseUser.email
 
             binding.tvEmail.text = email

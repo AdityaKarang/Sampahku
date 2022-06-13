@@ -68,47 +68,58 @@ class AddTukarSampahActivity : AppCompatActivity() {
         ).get(TukarSampahViewModel::class.java)
 
         binding.apply {
-        val array = ArrayAdapter(this@AddTukarSampahActivity, android.R.layout.simple_list_item_1, Jenis)
-        array.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        jenisampahET.setAdapter(array)
+            val array = ArrayAdapter(
+                this@AddTukarSampahActivity,
+                android.R.layout.simple_list_item_1,
+                Jenis
+            )
+            array.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            jenisampahET.setAdapter(array)
 
-        jenisampahET.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>,
-                view: View,
-                position: Int,
-                id: Long
-            ) {
-                JenisSelect = parent.getItemAtPosition(position).toString()
-                HargaSelect = Harga[position]
-                jenisampahET.setEnabled(true)
-                hitungHarga = HargaSelect.toInt()
-                if (inputberatET.getText().toString() != "") {
-                    hitungBerat = inputberatET.getText().toString().toInt()
-                    setupTotalPrice(hitungBerat)
-                } else {
-                    inputhargaET.setText(rpFormat(hitungHarga))
+            jenisampahET.setOnItemSelectedListener(object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View,
+                    position: Int,
+                    id: Long
+                ) {
+                    JenisSelect = parent.getItemAtPosition(position).toString()
+                    HargaSelect = Harga[position]
+                    jenisampahET.setEnabled(true)
+                    hitungHarga = HargaSelect.toInt()
+                    if (inputberatET.getText().toString() != "") {
+                        hitungBerat = inputberatET.getText().toString().toInt()
+                        setupTotalPrice(hitungBerat)
+                    } else {
+                        inputhargaET.setText(rpFormat(hitungHarga))
+                    }
                 }
-            }
 
-            override fun onNothingSelected(adapterView: AdapterView<*>?) {}
-        })
+                override fun onNothingSelected(adapterView: AdapterView<*>?) {}
+            })
 
-        inputberatET.addTextChangedListener(object : TextWatcher {
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
-            override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
-            override fun afterTextChanged(editable: Editable) {
-                inputberatET.removeTextChangedListener(this)
-                if (editable.length > 0) {
-                    hitungBerat = editable.toString().toInt()
-                    setupTotalPrice(hitungBerat)
-                } else {
-                    inputhargaET.setText(rpFormat(hitungHarga))
+            inputberatET.addTextChangedListener(object : TextWatcher {
+                override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {}
+                override fun beforeTextChanged(
+                    s: CharSequence,
+                    start: Int,
+                    count: Int,
+                    after: Int
+                ) {
                 }
-                inputberatET.addTextChangedListener(this)
-            }
-        })
-    }
+
+                override fun afterTextChanged(editable: Editable) {
+                    inputberatET.removeTextChangedListener(this)
+                    if (editable.length > 0) {
+                        hitungBerat = editable.toString().toInt()
+                        setupTotalPrice(hitungBerat)
+                    } else {
+                        inputhargaET.setText(rpFormat(hitungHarga))
+                    }
+                    inputberatET.addTextChangedListener(this)
+                }
+            })
+        }
     }
 
     private fun setupTotalPrice(berat: Int) {
@@ -122,27 +133,28 @@ class AddTukarSampahActivity : AppCompatActivity() {
 
 
         binding.apply {
-        btnTukar.setOnClickListener { v: View? ->
-            Nama = namaET.text.toString()
-            if (Nama.isEmpty() or (Jenis.size == 0) or (hitungBerat == 0) or (hitungHarga == 0)) {
-                Toast.makeText(
-                    this@AddTukarSampahActivity,
-                    "Mohon Lengkapi Data!",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } else {
-                tukarsampahVM.addData(
-                    Nama,
-                    JenisSelect,
-                    hitungBerat,
-                    hitungTotal
-                )
-                Toast.makeText(
-                    this@AddTukarSampahActivity,
-                    "Tukar Sampah Berhasil",
-                    Toast.LENGTH_SHORT).show()
+            btnTukar.setOnClickListener { v: View? ->
+                Nama = namaET.text.toString()
+                if (Nama.isEmpty() or (Jenis.size == 0) or (hitungBerat == 0) or (hitungHarga == 0)) {
+                    Toast.makeText(
+                        this@AddTukarSampahActivity,
+                        "Mohon Lengkapi Data!",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    tukarsampahVM.addData(
+                        Nama,
+                        JenisSelect,
+                        hitungBerat,
+                        hitungTotal
+                    )
+                    Toast.makeText(
+                        this@AddTukarSampahActivity,
+                        "Tukar Sampah Berhasil",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
             }
-        }
         }
     }
 

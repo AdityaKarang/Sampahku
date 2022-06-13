@@ -61,22 +61,21 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Invalid email format", Toast.LENGTH_SHORT).show()
         } else if (password.isEmpty()) {
             Toast.makeText(this, "Masukan password terlebih dahulu", Toast.LENGTH_SHORT).show()
-        }
-        else{
+        } else {
             userLogin()
         }
     }
 
-    private fun userLogin(){
+    private fun userLogin() {
 
         progressDialog.setMessage("Login..")
         progressDialog.show()
 
         auth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this){
+            .addOnCompleteListener(this) {
                 userCheck()
             }
-            .addOnFailureListener{e->
+            .addOnFailureListener { e ->
                 progressDialog.dismiss()
                 Toast.makeText(this, "login gagal ${e.message}", Toast.LENGTH_SHORT).show()
 
@@ -91,17 +90,21 @@ class LoginActivity : AppCompatActivity() {
 
         val ref = FirebaseDatabase.getInstance().getReference("Users")
         ref.child(firebaseUser.uid)
-            .addListenerForSingleValueEvent(object : ValueEventListener{
+            .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     progressDialog.dismiss()
 
                     val userType = snapshot.child("userType").value
-                    if (userType == "user"){
+                    if (userType == "user") {
                         startActivity(Intent(this@LoginActivity, UserDashboardActivity::class.java))
                         finish()
-                    }
-                    else if(userType == "admin"){
-                        startActivity(Intent(this@LoginActivity, AdminDashboardActivity::class.java))
+                    } else if (userType == "admin") {
+                        startActivity(
+                            Intent(
+                                this@LoginActivity,
+                                AdminDashboardActivity::class.java
+                            )
+                        )
                         finish()
                     }
                 }
@@ -132,7 +135,8 @@ class LoginActivity : AppCompatActivity() {
             ObjectAnimator.ofFloat(binding.imgBackground, View.ALPHA, 1f).setDuration(500)
         val messageTextView =
             ObjectAnimator.ofFloat(binding.messageTextView, View.ALPHA, 1f).setDuration(500)
-        val messageTextView1 = ObjectAnimator.ofFloat(binding.messageTextView1, View.ALPHA, 1f).setDuration(500)
+        val messageTextView1 =
+            ObjectAnimator.ofFloat(binding.messageTextView1, View.ALPHA, 1f).setDuration(500)
         val emailTextView =
             ObjectAnimator.ofFloat(binding.emailTextView, View.ALPHA, 1f).setDuration(500)
         val emailEditText =

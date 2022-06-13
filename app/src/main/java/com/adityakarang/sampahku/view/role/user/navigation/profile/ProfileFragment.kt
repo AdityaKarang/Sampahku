@@ -62,7 +62,7 @@ class ProfileFragment : Fragment() {
     private fun loadUser() {
         val ref = FirebaseDatabase.getInstance().getReference("Users")
         ref.child(auth.uid!!)
-            .addValueEventListener(object: ValueEventListener{
+            .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val email = "${snapshot.child("email").value}"
                     val name = "${snapshot.child("name").value}"
@@ -75,9 +75,9 @@ class ProfileFragment : Fragment() {
                     binding!!.tvEmail.text = email
 
                     try {
-                        Glide.with(this@ProfileFragment).load(imgProfile).placeholder(R.drawable.ic_person).into(binding!!.tvProfile)
-                    }
-                    catch (e: Exception){
+                        Glide.with(this@ProfileFragment).load(imgProfile)
+                            .placeholder(R.drawable.ic_person).into(binding!!.tvProfile)
+                    } catch (e: Exception) {
 
                     }
                 }

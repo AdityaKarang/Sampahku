@@ -10,7 +10,7 @@ class DbClient private constructor(context: Context) {
 
     companion object {
         private var mInstance: DbClient? = null
-        
+
         fun getInstance(context: Context): DbClient? {
             if (mInstance == null) {
                 mInstance = DbClient(context)

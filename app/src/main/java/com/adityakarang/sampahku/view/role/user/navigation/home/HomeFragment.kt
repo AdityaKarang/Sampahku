@@ -34,16 +34,16 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-       homeVM.totalSaldo.observe(viewLifecycleOwner) { integer ->
-           if (integer == null) {
-               val jumlahSaldo = 0
-               val initSaldo = HelpFunction.rpFormat(jumlahSaldo)
-               binding!!.tvPoint.text = initSaldo
-           } else {
-               val initSaldo = HelpFunction.rpFormat(integer)
-               binding!!.tvPoint.text = initSaldo
-           }
-       }
+        homeVM.totalSaldo.observe(viewLifecycleOwner) { integer ->
+            if (integer == null) {
+                val jumlahSaldo = 0
+                val initSaldo = HelpFunction.rpFormat(jumlahSaldo)
+                binding!!.tvPoint.text = initSaldo
+            } else {
+                val initSaldo = HelpFunction.rpFormat(integer)
+                binding!!.tvPoint.text = initSaldo
+            }
+        }
 
         binding!!.tvPickup.setOnClickListener {
             Intent(requireActivity(), PickupActivity::class.java).apply {
@@ -71,7 +71,6 @@ class HomeFragment : Fragment() {
 
 
     }
-
 
 
     override fun onDestroyView() {

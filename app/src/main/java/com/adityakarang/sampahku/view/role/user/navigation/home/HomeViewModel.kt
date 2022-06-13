@@ -14,7 +14,6 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     var databaseDao: DbDao?
 
 
-
     init {
         databaseDao = DbClient.getInstance(application)?.appDatabase?.dbDao()
         dataBank = databaseDao!!.getallSampah()

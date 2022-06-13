@@ -12,7 +12,7 @@ import com.adityakarang.sampahku.filter.KategoriFilter
 import com.adityakarang.sampahku.model.KategoriModel
 import com.google.firebase.database.FirebaseDatabase
 
-class KategoriAdapter : RecyclerView.Adapter<KategoriAdapter.HolderKategori>, Filterable{
+class KategoriAdapter : RecyclerView.Adapter<KategoriAdapter.HolderKategori>, Filterable {
 
     private val context: Context
     public var categoryArrayList: ArrayList<KategoriModel>
@@ -27,9 +27,9 @@ class KategoriAdapter : RecyclerView.Adapter<KategoriAdapter.HolderKategori>, Fi
         this.filterlist = categoryArrayList
     }
 
-    inner class HolderKategori(itemView: View): RecyclerView.ViewHolder(itemView){
-        var tvKategori : TextView = binding.tvKategori
-        var kategoridlt : ImageButton = binding.kategoridlt
+    inner class HolderKategori(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var tvKategori: TextView = binding.tvKategori
+        var kategoridlt: ImageButton = binding.kategoridlt
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderKategori {
@@ -51,11 +51,11 @@ class KategoriAdapter : RecyclerView.Adapter<KategoriAdapter.HolderKategori>, Fi
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Hapus")
                 .setMessage("Apa anda yakin menghapus kategori ini?")
-                .setPositiveButton("Konfirmasi"){a, d->
+                .setPositiveButton("Konfirmasi") { a, d ->
                     Toast.makeText(context, "Menghapus Kategori...", Toast.LENGTH_SHORT).show()
                     deleteKategori(model, holder)
                 }
-                .setNegativeButton("Batal"){a, d->
+                .setNegativeButton("Batal") { a, d ->
                     a.dismiss()
                 }
                 .show()
@@ -72,8 +72,12 @@ class KategoriAdapter : RecyclerView.Adapter<KategoriAdapter.HolderKategori>, Fi
                 Toast.makeText(context, "Berhasil Menghapus", Toast.LENGTH_SHORT).show()
 
             }
-            .addOnFailureListener{e->
-                Toast.makeText(context, "unable to delete due to ${e.message}...", Toast.LENGTH_SHORT).show()
+            .addOnFailureListener { e ->
+                Toast.makeText(
+                    context,
+                    "unable to delete due to ${e.message}...",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
     }
 
@@ -82,7 +86,7 @@ class KategoriAdapter : RecyclerView.Adapter<KategoriAdapter.HolderKategori>, Fi
     }
 
     override fun getFilter(): Filter {
-        if (filter == null){
+        if (filter == null) {
             filter = KategoriFilter(filterlist, this)
         }
         return filter as KategoriFilter

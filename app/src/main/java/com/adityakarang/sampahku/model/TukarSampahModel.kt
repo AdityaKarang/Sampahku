@@ -26,6 +26,4 @@ data class TukarSampahModel(
     var harga: Int = 0,
 
 
-
-
-) : Parcelable
+    ) : Parcelable

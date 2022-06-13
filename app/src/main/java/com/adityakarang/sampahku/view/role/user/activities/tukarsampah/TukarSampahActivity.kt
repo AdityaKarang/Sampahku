@@ -65,7 +65,8 @@ class TukarSampahActivity : AppCompatActivity(), TukarSampahAdapter.TukarSampahA
         alertDialogBuilder.setPositiveButton("Tukar") { dialogInterface: DialogInterface?, i: Int ->
             val uid = tukarSampahModel!!.uid
             tukarsampahVM.deleteDataById(uid)
-            Toast.makeText(this@TukarSampahActivity, "Berhasil menukar saldo", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@TukarSampahActivity, "Berhasil menukar saldo", Toast.LENGTH_SHORT)
+                .show()
         }
 
         alertDialogBuilder.setNegativeButton("Batal") { dialogInterface: DialogInterface, i: Int -> dialogInterface.cancel() }
@@ -94,12 +95,16 @@ class TukarSampahActivity : AppCompatActivity(), TukarSampahAdapter.TukarSampahA
         }
     }
 
-    private fun setAction(){
+    private fun setAction() {
         binding.apply {
             pickupAdd.setOnClickListener {
-                startActivity(Intent(this@TukarSampahActivity, AddTukarSampahActivity::class.java).apply {
-                    startActivity(this)
-                })
+                startActivity(
+                    Intent(
+                        this@TukarSampahActivity,
+                        AddTukarSampahActivity::class.java
+                    ).apply {
+                        startActivity(this)
+                    })
             }
         }
     }
